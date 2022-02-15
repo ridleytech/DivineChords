@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 import {
   View,
   TouchableOpacity,
@@ -7,42 +7,42 @@ import {
   Image,
   Animated,
   Linking,
-} from 'react-native';
-import Header from './Header';
-import Hyperlink from 'react-native-hyperlink';
-import {useSelector, useDispatch} from 'react-redux';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+} from "react-native";
+import Header from "./Header";
+import Hyperlink from "react-native-hyperlink";
+import { useSelector, useDispatch } from "react-redux";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import {FlatList, ScrollView} from 'react-native-gesture-handler';
+import { FlatList, ScrollView } from "react-native-gesture-handler";
 
-const MainMenu = ({setMode}) => {
-  var levels = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Db', 'Eb', 'Bb', 'F'];
+const MainMenu = ({ setMode }) => {
+  var levels = ["C", "G", "D", "A", "E", "B", "F#", "Db", "Eb", "Bb", "F"];
 
-  const loggedIn = useSelector(state => state.loggedIn);
-  const accessFeature = useSelector(state => state.accessFeature);
+  const loggedIn = useSelector((state) => state.loggedIn);
+  const accessFeature = useSelector((state) => state.accessFeature);
   const highestCompletedPitchLevel = useSelector(
-    state => state.highestCompletedPitchLevel,
+    (state) => state.highestCompletedPitchLevel
   );
   const highestCompletedIntervalBrokenLevel = useSelector(
-    state => state.highestCompletedIntervalBrokenLevel,
+    (state) => state.highestCompletedIntervalBrokenLevel
   );
   const highestCompletedIntervalBlockedLevel = useSelector(
-    state => state.highestCompletedIntervalBlockedLevel,
+    (state) => state.highestCompletedIntervalBlockedLevel
   );
   const highestCompletedTriadsBlockedLevel = useSelector(
-    state => state.highestCompletedTriadsBlockedLevel,
+    (state) => state.highestCompletedTriadsBlockedLevel
   );
   const highestCompletedTriadsBrokenLevel = useSelector(
-    state => state.highestCompletedTriadsBrokenLevel,
+    (state) => state.highestCompletedTriadsBrokenLevel
   );
   const highestCompletedBassLevel = useSelector(
-    state => state.highestCompletedBassLevel,
+    (state) => state.highestCompletedBassLevel
   );
   const highestCompletedProgressionLevel = useSelector(
-    state => state.highestCompletedProgressionLevel,
+    (state) => state.highestCompletedProgressionLevel
   );
 
-  const isAdmin = useSelector(state => state.isAdmin);
+  const isAdmin = useSelector((state) => state.isAdmin);
 
   const opacity = useState(new Animated.Value(0))[0];
   const dispatch = useDispatch();
@@ -59,7 +59,7 @@ const MainMenu = ({setMode}) => {
 
   useEffect(() => {
     if (isAdmin == true) {
-      console.log('isAdmin: ' + isAdmin);
+      console.log("isAdmin: " + isAdmin);
       storeAdminData();
     }
   }, [isAdmin]);
@@ -72,7 +72,7 @@ const MainMenu = ({setMode}) => {
     if (loggedIn) {
       checkAdmin();
     } else if (loggedIn === false && isAdmin === null) {
-      console.log('remove admin data');
+      console.log("remove admin data");
       removeAdminData();
     }
   }, [loggedIn]);
@@ -85,9 +85,9 @@ const MainMenu = ({setMode}) => {
 
   viewCourse = () => {
     let url =
-      'https://pianolessonwithwarren.com/courses/the-ear-training-regimen-for-beginners-and-intermediates/';
+      "https://pianolessonwithwarren.com/courses/the-ear-training-regimen-for-beginners-and-intermediates/";
 
-    Linking.canOpenURL(url).then(supported => {
+    Linking.canOpenURL(url).then((supported) => {
       if (supported) {
         Linking.openURL(url);
       } else {
@@ -98,13 +98,13 @@ const MainMenu = ({setMode}) => {
 
   const checkAdmin = async () => {
     try {
-      var value = await AsyncStorage.getItem('isAdmin');
+      var value = await AsyncStorage.getItem("isAdmin");
 
       if (value !== null) {
         // We have data!!
         console.log(`has admin: ` + value);
 
-        dispatch({type: 'SET_ADMIN'});
+        dispatch({ type: "SET_ADMIN" });
       } else {
         console.log(`no admin status`);
       }
@@ -115,22 +115,22 @@ const MainMenu = ({setMode}) => {
 
   const storeAdminData = async () => {
     try {
-      await AsyncStorage.setItem('isAdmin', 'true');
+      await AsyncStorage.setItem("isAdmin", "true");
 
-      console.log('admin status saved');
+      console.log("admin status saved");
     } catch (error) {
-      console.log('admin status not saved');
+      console.log("admin status not saved");
       // Error saving data
     }
   };
 
   const removeAdminData = async () => {
     try {
-      await AsyncStorage.removeItem('isAdmin');
+      await AsyncStorage.removeItem("isAdmin");
 
-      console.log('admin status remove');
+      console.log("admin status remove");
     } catch (error) {
-      console.log('admin status not remove');
+      console.log("admin status not remove");
       // Error saving data
     }
   };
@@ -140,16 +140,20 @@ const MainMenu = ({setMode}) => {
       <View
         style={{
           padding: 20,
-          backgroundColor: 'white',
+          backgroundColor: "white",
           flex: 1,
-        }}>
+          width: "100%",
+        }}
+      >
         <Text
           style={{
-            fontFamily: 'Helvetica Neue',
+            fontFamily: "Helvetica Neue",
             fontSize: 20,
-            fontWeight: 'bold',
-            color: '#3AB24A',
-          }}>
+            fontWeight: "bold",
+            color: "#3AB24A",
+            textAlign: "center",
+          }}
+        >
           Divine Chords
         </Text>
 
@@ -179,22 +183,24 @@ const MainMenu = ({setMode}) => {
           </Text>
         </View> */}
         {/* <Image source={videoImg} style={styles.video} /> */}
-        <Animated.View style={{marginTop: 25, opacity: opacity}}>
+        <Animated.View style={{ marginTop: 25, opacity: opacity }}>
           <View
             style={{
-              backgroundColor: '#3AB24A',
+              backgroundColor: "#3AB24A",
               height: 65,
               borderTopLeftRadius: 8,
               borderTopRightRadius: 8,
-            }}>
+            }}
+          >
             <Text
               style={{
-                color: 'white',
+                color: "white",
                 fontSize: 20,
-                fontWeight: 'bold',
+                fontWeight: "bold",
                 padding: 20,
-                textAlign: 'center',
-              }}>
+                textAlign: "center",
+              }}
+            >
               Select Key
             </Text>
           </View>
@@ -208,7 +214,7 @@ const MainMenu = ({setMode}) => {
 
           {/* {console.log('hcbl: ' + highestCompletedBassLevel)} */}
 
-          <ScrollView style={{height: '100%'}}>
+          <ScrollView style={{ height: "100%" }}>
             {levels.map((level, index) => {
               //console.log('ind: ' + level + ' ' + index);
               var icon;
@@ -256,27 +262,30 @@ const MainMenu = ({setMode}) => {
                   onPress={() => {
                     setMode(index + 1);
                   }}
-                  key={index}>
+                  key={index}
+                >
                   <View
                     style={{
-                      backgroundColor: '#F6FA43',
+                      backgroundColor: "#F6FA43",
                       height: 65,
                       marginBottom: 2,
-                    }}>
+                    }}
+                  >
                     <Text
                       style={{
                         fontSize: 20,
-                        fontWeight: 'bold',
+                        fontWeight: "bold",
                         padding: 20,
-                        textAlign: 'center',
-                      }}>
+                        textAlign: "center",
+                      }}
+                    >
                       {level}
                     </Text>
                   </View>
 
                   <Image
                     source={icon}
-                    style={{position: 'absolute', right: 12, top: 12}}
+                    style={{ position: "absolute", right: 12, top: 12 }}
                   />
 
                   {/* {loggedIn && accessFeature == 2 ? (
@@ -295,7 +304,7 @@ const MainMenu = ({setMode}) => {
                 </TouchableOpacity>
               );
             })}
-            <View style={{height: 270}} />
+            <View style={{ height: 270 }} />
           </ScrollView>
         </Animated.View>
       </View>

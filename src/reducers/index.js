@@ -1,8 +1,8 @@
-import {act} from 'react-test-renderer';
+import { act } from "react-test-renderer";
 
 var local = false;
-var localPath = 'http://localhost:8888/ridleytech/pianolesson/';
-var remotePath = 'https://pianolessonwithwarren.com/dev_site/pianolesson/';
+var localPath = "http://localhost:8888/ridleytech/pianolesson/";
+var remotePath = "https://pianolessonwithwarren.com/dev_site/pianolesson/";
 
 var url;
 
@@ -48,18 +48,19 @@ const inititalState = {
   currentVersion: 1.0,
   latestVersion: null,
   hasProgress: null,
-  loginErrorMsg: '',
-  currentChord: '',
+  loginErrorMsg: "",
+  currentChord: "",
+  currentChordType: "",
 };
 
 export default (state = inititalState, action) => {
   switch (action.type) {
-    case 'GET_QUESTION':
+    case "GET_QUESTION":
       return {
         ...state,
         stuff: 1,
       };
-    case 'AUTH_DATA':
+    case "AUTH_DATA":
       let loginData = action.payload.data;
 
       console.log(`loginData: ${JSON.stringify(loginData)}`);
@@ -70,7 +71,7 @@ export default (state = inititalState, action) => {
       var uname = action.user.username.toUpperCase();
       var admin = false;
 
-      if (uname == 'RIDLEY1224' || uname == 'STRIKER85' || uname == 'TEST') {
+      if (uname == "RIDLEY1224" || uname == "STRIKER85" || uname == "TEST") {
         loginStatus = true;
         loginError1 = false;
         mode1 = state.previousMode;
@@ -85,10 +86,10 @@ export default (state = inititalState, action) => {
         loginError1 = true;
 
         if (loginData.hasAccount === false) {
-          msg = 'Username/password combination invalid.';
+          msg = "Username/password combination invalid.";
         } else {
           msg =
-            'Your membership is currently inactive. Please reactivate your membership.';
+            "Your membership is currently inactive. Please reactivate your membership.";
         }
       }
 
@@ -106,27 +107,27 @@ export default (state = inititalState, action) => {
         isAdmin: admin,
       };
 
-    case 'LOGIN_ERROR':
+    case "LOGIN_ERROR":
       return {
         ...state,
         loginError: true,
         loginEnabled: true,
       };
 
-    case 'RESET_LEADER_DATA':
-      console.log('RESET_LEADER_DATA');
+    case "RESET_LEADER_DATA":
+      console.log("RESET_LEADER_DATA");
       return {
         ...state,
         leaderData: [],
       };
 
-    case 'AUTH_SITE_DATA':
+    case "AUTH_SITE_DATA":
       let authData = action.payload.data;
 
       console.log(`AUTH_SITE_DATA loginData: ${JSON.stringify(authData)}`);
       var userid1;
 
-      if (authData.status !== 'username missing') {
+      if (authData.status !== "username missing") {
         userid1 = parseInt(authData.userid);
       }
 
@@ -135,44 +136,44 @@ export default (state = inititalState, action) => {
         userid: userid1,
       };
 
-    case 'LOGIN_SITE_ERROR':
+    case "LOGIN_SITE_ERROR":
       return {
         ...state,
       };
 
-    case 'SET_ACCESS_FEATURE':
+    case "SET_ACCESS_FEATURE":
       return {
         ...state,
         accessFeature: action.payload.accessData.status,
         latestVersion: action.payload.accessData.latestVersion,
       };
 
-    case 'SET_USERNAME':
+    case "SET_USERNAME":
       return {
         ...state,
         username: action.username,
       };
 
-    case 'SET_USERID':
+    case "SET_USERID":
       return {
         ...state,
         userid: action.userid,
       };
 
-    case 'SET_DEVICE_USERNAME':
+    case "SET_DEVICE_USERNAME":
       return {
         ...state,
         deviceUsername: action.username,
       };
 
-    case 'LOGIN_ERROR':
+    case "LOGIN_ERROR":
       return {
         ...state,
         loginError: true,
         loginEnabled: true,
       };
 
-    case 'SUPPORT_DATA':
+    case "SUPPORT_DATA":
       let supportData = action.payload;
 
       console.log(`support data: ${JSON.stringify(supportData)}`);
@@ -192,7 +193,7 @@ export default (state = inititalState, action) => {
         //console.log('confirmation messages matches');
 
         responseMessage1 =
-          'Thanks for contacting us! We will get in touch with you within 24 hours.';
+          "Thanks for contacting us! We will get in touch with you within 24 hours.";
         supportStatus = true;
         supportError1 = false;
       } else {
@@ -211,15 +212,15 @@ export default (state = inititalState, action) => {
         responseMessage: responseMessage1,
       };
 
-    case 'SUPPORT_ERROR':
+    case "SUPPORT_ERROR":
       return {
         ...state,
         supportError: true,
         supportEnabled: true,
-        responseMessage: 'Message was not sent. Please try again later.',
+        responseMessage: "Message was not sent. Please try again later.",
       };
 
-    case 'CLEAR_SUPPORT_ERROR':
+    case "CLEAR_SUPPORT_ERROR":
       //console.log('CLEAR_SUPPORT_ERROR');
       return {
         ...state,
@@ -228,20 +229,20 @@ export default (state = inititalState, action) => {
         responseMessage: null,
       };
 
-    case 'MANAGE_LOGIN':
+    case "MANAGE_LOGIN":
       return {
         ...state,
         loginEnabled: action.status,
       };
 
-    case 'MANAGE_SUPPORT':
+    case "MANAGE_SUPPORT":
       return {
         ...state,
         supportEnabled: action.status,
       };
 
-    case 'LOGIN_USER':
-      console.log('login redux');
+    case "LOGIN_USER":
+      console.log("login redux");
       return {
         ...state,
         // username: action.username,
@@ -249,7 +250,7 @@ export default (state = inititalState, action) => {
         loggedIn: true,
       };
 
-    case 'SHOW_LOGIN':
+    case "SHOW_LOGIN":
       //console.log('SHOW_LOGIN');
 
       var pm = state.mode;
@@ -260,8 +261,8 @@ export default (state = inititalState, action) => {
         previousMode: pm,
       };
 
-    case 'LOGOUT_USER':
-      console.log('logout redux');
+    case "LOGOUT_USER":
+      console.log("logout redux");
       return {
         ...state,
         loggedIn: false,
@@ -272,14 +273,14 @@ export default (state = inititalState, action) => {
         isAdmin: null,
       };
 
-    case 'SET_ADMIN':
+    case "SET_ADMIN":
       //console.log('SET_ADMIN');
       return {
         ...state,
         isAdmin: true,
       };
 
-    case 'MANAGE_GRAPH':
+    case "MANAGE_GRAPH":
       //console.log('MANAGE_GRAPH: ' + JSON.stringify(action));
 
       return {
@@ -287,7 +288,7 @@ export default (state = inititalState, action) => {
         graphStarted: action.status,
       };
 
-    case 'PROGRESS_INFO':
+    case "PROGRESS_INFO":
       let progressData = action.payload.progressData;
 
       //console.log(`progressData: ${JSON.stringify(progressData)}`);
@@ -305,7 +306,7 @@ export default (state = inititalState, action) => {
         hasProgress: true,
       };
 
-    case 'LEADER_DATA':
+    case "LEADER_DATA":
       let leaderData = action.payload.leaderData;
 
       console.log(`leaderData: ${JSON.stringify(leaderData)}`);
@@ -315,7 +316,7 @@ export default (state = inititalState, action) => {
         leaderData: leaderData,
       };
 
-    case 'SCORE_SAVED':
+    case "SCORE_SAVED":
       let scoreData = action.payload;
 
       console.log(`scoreData: ${JSON.stringify(scoreData)}`);
@@ -325,7 +326,7 @@ export default (state = inititalState, action) => {
         //leaderData: leaderData,
       };
 
-    case 'SET_PITCH_PROGRESS':
+    case "SET_PITCH_PROGRESS":
       //console.log('action: ' + JSON.stringify(action));
 
       var completedLevel = parseInt(action.level.highestCompletedPitchLevel);
@@ -343,17 +344,19 @@ export default (state = inititalState, action) => {
         highestCompletedPitchLevel: levelVal,
       };
 
-    case 'SET_CURRENT_CHORD':
+    case "SET_CURRENT_CHORD":
       //console.log('action: ' + JSON.stringify(action));
 
       var chord = action.chord;
+      var chordType = action.chordType;
 
       return {
         ...state,
         currentChord: chord,
+        currentChordType: chordType,
       };
 
-    case 'SET_BASS_PROGRESS':
+    case "SET_BASS_PROGRESS":
       //console.log('action: ' + JSON.stringify(action));
 
       var completedLevel = parseInt(action.level.highestCompletedBassLevel);
@@ -371,11 +374,11 @@ export default (state = inititalState, action) => {
         highestCompletedBassLevel: levelVal,
       };
 
-    case 'SET_PROGRESSION_PROGRESS':
+    case "SET_PROGRESSION_PROGRESS":
       //console.log('action: ' + JSON.stringify(action));
 
       var completedLevel = parseInt(
-        action.level.highestCompletedProgressionLevel,
+        action.level.highestCompletedProgressionLevel
       );
       var levelVal = state.highestCompletedProgressionLevel;
 
@@ -391,11 +394,11 @@ export default (state = inititalState, action) => {
         highestCompletedProgressionLevel: levelVal,
       };
 
-    case 'SET_INTERVAL_BROKEN_PROGRESS':
+    case "SET_INTERVAL_BROKEN_PROGRESS":
       //console.log('action: ' + JSON.stringify(action));
 
       var completedLevel = parseInt(
-        action.level.highestCompletedIntervalBrokenLevel,
+        action.level.highestCompletedIntervalBrokenLevel
       );
       var levelVal = state.highestCompletedIntervalBrokenLevel;
 
@@ -408,11 +411,11 @@ export default (state = inititalState, action) => {
         highestCompletedIntervalBrokenLevel: levelVal,
       };
 
-    case 'SET_INTERVAL_BLOCKED_PROGRESS':
+    case "SET_INTERVAL_BLOCKED_PROGRESS":
       //console.log('action: ' + JSON.stringify(action));
 
       var completedLevel = parseInt(
-        action.level.highestCompletedIntervalBlockedLevel,
+        action.level.highestCompletedIntervalBlockedLevel
       );
       var levelVal = state.highestCompletedIntervalBlockedLevel;
 
@@ -440,11 +443,11 @@ export default (state = inititalState, action) => {
     //     highestCompletedTriadsLevel: levelVal,
     //   };
 
-    case 'SET_TRIADS_BLOCKED_PROGRESS':
+    case "SET_TRIADS_BLOCKED_PROGRESS":
       //console.log('action: ' + JSON.stringify(action));
 
       var completedLevel = parseInt(
-        action.level.highestCompletedTriadsBlockedLevel,
+        action.level.highestCompletedTriadsBlockedLevel
       );
       var levelVal = state.highestCompletedTriadsBlockedLevel;
 
@@ -457,11 +460,11 @@ export default (state = inititalState, action) => {
         highestCompletedTriadsBlockedLevel: levelVal,
       };
 
-    case 'SET_TRIADS_BROKEN_PROGRESS':
+    case "SET_TRIADS_BROKEN_PROGRESS":
       //console.log('action: ' + JSON.stringify(action));
 
       var completedLevel = parseInt(
-        action.level.highestCompletedTriadsBrokenLevel,
+        action.level.highestCompletedTriadsBrokenLevel
       );
       var levelVal = state.highestCompletedTriadsBrokenLevel;
 
@@ -474,10 +477,10 @@ export default (state = inititalState, action) => {
         highestCompletedTriadsBrokenLevel: levelVal,
       };
 
-    case 'RESET_PROGRESS':
+    case "RESET_PROGRESS":
       //console.log('action: ' + JSON.stringify(action));
 
-      console.log('RESET_PROGRESS');
+      console.log("RESET_PROGRESS");
       return {
         ...state,
         highestCompletedPitchLevel: 0,
@@ -488,38 +491,38 @@ export default (state = inititalState, action) => {
         highestCompletedTriadsLevelBroken: 0,
       };
 
-    case 'SET_LEVEL':
+    case "SET_LEVEL":
       return {
         ...state,
         level: action.level,
       };
 
-    case 'SET_MODE':
+    case "SET_MODE":
       return {
         ...state,
         mode: action.mode,
       };
 
-    case 'SET_LEADERBOARD_MODE':
+    case "SET_LEADERBOARD_MODE":
       return {
         ...state,
         leaderboardMode: action.mode,
       };
 
-    case 'SET_TRIAD_MODE':
+    case "SET_TRIAD_MODE":
       return {
         ...state,
         triadmode: action.mode,
       };
 
-    case 'SET_INTERVAL_MODE':
+    case "SET_INTERVAL_MODE":
       return {
         ...state,
         intervalmode: action.mode,
       };
 
-    case 'PROGRESS_SAVED':
-      console.log('PROGRESS_SAVED: ' + JSON.stringify(action.payload));
+    case "PROGRESS_SAVED":
+      console.log("PROGRESS_SAVED: " + JSON.stringify(action.payload));
 
       return {
         ...state,

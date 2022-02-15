@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useMemo} from 'react';
+import React, { useEffect, useState, useMemo } from "react";
 import {
   Text,
   Button,
@@ -13,18 +13,18 @@ import {
   Keyboard,
   Alert,
   Linking,
-} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+} from "react-native";
+import LinearGradient from "react-native-linear-gradient";
 
-import {useDispatch, useSelector, connect} from 'react-redux';
+import { useDispatch, useSelector, connect } from "react-redux";
 
-import Slider from '@react-native-community/slider';
+import Slider from "@react-native-community/slider";
 //import styles from './styles';
-import data from '../data/questions.json';
-import Instructions from './Instructions';
-import KeyboardView from './KeyboardView';
-import KeyboardView2 from './KeyboardView2';
-import {saveTestScore, saveProgress} from '../thunks/';
+import data from "../data/questions.json";
+import Instructions from "./Instructions";
+import KeyboardView from "./KeyboardView";
+import KeyboardView2 from "./KeyboardView2";
+import { saveTestScore, saveProgress } from "../thunks/";
 
 //https://nicedoc.io/zmxv/react-native-sound
 
@@ -34,10 +34,10 @@ import {saveTestScore, saveProgress} from '../thunks/';
 
 //https://github.com/zmxv/react-native-sound
 
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get("window");
 const aspectRatio = height / width;
 
-const ChordsView = ({level, mode, props}) => {
+const ChordsView = ({ level, mode, props }) => {
   const dispatch = useDispatch();
 
   // level = 3;
@@ -98,9 +98,9 @@ const ChordsView = ({level, mode, props}) => {
   }).start();
 
   //init load
-  var level1 = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Db', 'Eb', 'Bb', 'F'];
+  var level1 = ["C", "G", "D", "A", "E", "B", "F#", "Db", "Eb", "Bb", "F"];
 
-  var modename = level1[mode] + ' Major';
+  var modename = level1[mode] + " Major";
 
   useEffect(() => {
     var key = level1[mode];
@@ -108,27 +108,27 @@ const ChordsView = ({level, mode, props}) => {
     //console.log('key: ' + key);
     var chords;
 
-    if (key == 'C') {
+    if (key == "C") {
       chords = data.DivineChords.C;
-    } else if (key == 'G') {
+    } else if (key == "G") {
       chords = data.DivineChords.G;
-    } else if (key == 'D') {
+    } else if (key == "D") {
       chords = data.DivineChords.D;
-    } else if (key == 'A') {
+    } else if (key == "A") {
       chords = data.DivineChords.A;
-    } else if (key == 'E') {
+    } else if (key == "E") {
       chords = data.DivineChords.E;
-    } else if (key == 'B') {
+    } else if (key == "B") {
       chords = data.DivineChords.B;
-    } else if (key == 'F#') {
+    } else if (key == "F#") {
       chords = data.DivineChords.Fs;
-    } else if (key == 'Db') {
+    } else if (key == "Db") {
       chords = data.DivineChords.Db;
-    } else if (key == 'Eb') {
+    } else if (key == "Eb") {
       chords = data.DivineChords.Eb;
-    } else if (key == 'Bb') {
+    } else if (key == "Bb") {
       chords = data.DivineChords.Bb;
-    } else if (key == 'F') {
+    } else if (key == "F") {
       chords = data.DivineChords.F;
     }
     setPrincipalChords(chords.principal);
@@ -175,188 +175,189 @@ const ChordsView = ({level, mode, props}) => {
     setInstructions(instructions);
   };
 
-  const showChords = (key) => {
+  const showChords = (key, type) => {
     //console.log('press chord: ' + key);
 
     var codes;
 
-    if (key == 'C') {
+    if (key == "C") {
       codes = data.KeyCodes.C;
-    } else if (key == 'G') {
+    } else if (key == "G") {
       codes = data.KeyCodes.G;
-    } else if (key == 'D') {
+    } else if (key == "D") {
       codes = data.KeyCodes.D;
-    } else if (key == 'A') {
+    } else if (key == "A") {
       codes = data.KeyCodes.A;
-    } else if (key == 'E') {
+    } else if (key == "E") {
       codes = data.KeyCodes.E;
-    } else if (key == 'B') {
+    } else if (key == "B") {
       codes = data.KeyCodes.B;
-    } else if (key == 'F#') {
+    } else if (key == "F#") {
       codes = data.KeyCodes.Fs;
-    } else if (key == 'Db') {
+    } else if (key == "Db") {
       codes = data.KeyCodes.Db;
-    } else if (key == 'Eb') {
+    } else if (key == "Eb") {
       codes = data.KeyCodes.Eb;
-    } else if (key == 'Bb') {
+    } else if (key == "Bb") {
       codes = data.KeyCodes.Bb;
-    } else if (key == 'F') {
+    } else if (key == "F") {
       codes = data.KeyCodes.F;
-    } else if (key == 'G7') {
+    } else if (key == "G7") {
       codes = data.KeyCodes.G7;
-    } else if (key == 'Am') {
+    } else if (key == "Am") {
       codes = data.KeyCodes.Am;
-    } else if (key == 'Dm') {
+    } else if (key == "Dm") {
       codes = data.KeyCodes.Dm;
-    } else if (key == 'Em') {
+    } else if (key == "Em") {
       codes = data.KeyCodes.Em;
-    } else if (key == 'C6') {
+    } else if (key == "C6") {
       codes = data.KeyCodes.C6;
-    } else if (key == 'Cdim') {
+    } else if (key == "Cdim") {
       codes = data.KeyCodes.Cdim;
-    } else if (key == 'Caug') {
+    } else if (key == "Caug") {
       codes = data.KeyCodes.Caug;
-    } else if (key == 'F6') {
+    } else if (key == "F6") {
       codes = data.KeyCodes.F6;
-    } else if (key == 'Am6') {
+    } else if (key == "Am6") {
       codes = data.KeyCodes.Am6;
-    } else if (key == 'G') {
+    } else if (key == "G") {
       codes = data.KeyCodes.G;
-    } else if (key == 'D7') {
+    } else if (key == "D7") {
       codes = data.KeyCodes.D7;
-    } else if (key == 'Bm') {
+    } else if (key == "Bm") {
       codes = data.KeyCodes.Bm;
-    } else if (key == 'G6') {
+    } else if (key == "G6") {
       codes = data.KeyCodes.G6;
-    } else if (key == 'Gdim') {
+    } else if (key == "Gdim") {
       codes = data.KeyCodes.Gdim;
-    } else if (key == 'Gaug') {
+    } else if (key == "Gaug") {
       codes = data.KeyCodes.Gaug;
-    } else if (key == 'Em6') {
+    } else if (key == "Em6") {
       codes = data.KeyCodes.Em6;
-    } else if (key == 'A7') {
+    } else if (key == "A7") {
       codes = data.KeyCodes.A7;
-    } else if (key == 'Gm') {
+    } else if (key == "Gm") {
       codes = data.KeyCodes.Gm;
-    } else if (key == 'F#m') {
+    } else if (key == "F#m") {
       codes = data.KeyCodes.Fsm;
-    } else if (key == 'D6') {
+    } else if (key == "D6") {
       codes = data.KeyCodes.D6;
-    } else if (key == 'Ddim') {
+    } else if (key == "Ddim") {
       codes = data.KeyCodes.Ddim;
-    } else if (key == 'Daug') {
+    } else if (key == "Daug") {
       codes = data.KeyCodes.Daug;
-    } else if (key == 'Bm6') {
+    } else if (key == "Bm6") {
       codes = data.KeyCodes.Bm6;
-    } else if (key == 'E7') {
+    } else if (key == "E7") {
       codes = data.KeyCodes.E7;
-    } else if (key == 'C#m') {
+    } else if (key == "C#m") {
       codes = data.KeyCodes.Csm;
-    } else if (key == 'A6') {
+    } else if (key == "A6") {
       codes = data.KeyCodes.A6;
-    } else if (key == 'Adim') {
+    } else if (key == "Adim") {
       codes = data.KeyCodes.Adim;
-    } else if (key == 'Aaug') {
+    } else if (key == "Aaug") {
       codes = data.KeyCodes.Aaug;
-    } else if (key == 'F#m6') {
+    } else if (key == "F#m6") {
       codes = data.KeyCodes.Fsm6;
-    } else if (key == 'G#7') {
+    } else if (key == "G#7") {
       codes = data.KeyCodes.Gs7;
-    } else if (key == 'G#m') {
+    } else if (key == "G#m") {
       codes = data.KeyCodes.Gsm;
-    } else if (key == 'E6') {
+    } else if (key == "E6") {
       codes = data.KeyCodes.E6;
-    } else if (key == 'Edim') {
+    } else if (key == "Edim") {
       codes = data.KeyCodes.Edim;
-    } else if (key == 'Eaug') {
+    } else if (key == "Eaug") {
       codes = data.KeyCodes.Eaug;
-    } else if (key == 'Cm6') {
+    } else if (key == "Cm6") {
       codes = data.KeyCodes.Cm6;
-    } else if (key == 'D#m') {
+    } else if (key == "D#m") {
       codes = data.KeyCodes.Dsm;
-    } else if (key == 'B6') {
+    } else if (key == "B6") {
       codes = data.KeyCodes.B6;
-    } else if (key == 'Bdim') {
+    } else if (key == "Bdim") {
       codes = data.KeyCodes.Bdim;
-    } else if (key == 'Baug') {
+    } else if (key == "Baug") {
       codes = data.KeyCodes.Baug;
-    } else if (key == 'G#m6') {
+    } else if (key == "G#m6") {
       codes = data.KeyCodes.Gsm6;
-    } else if (key == 'F#') {
+    } else if (key == "F#") {
       codes = data.KeyCodes.Fs;
-    } else if (key == 'C#7') {
+    } else if (key == "C#7") {
       codes = data.KeyCodes.Cs7;
-    } else if (key == 'A#m') {
+    } else if (key == "A#m") {
       codes = data.KeyCodes.Asm;
-    } else if (key == 'F#6') {
+    } else if (key == "F#6") {
       codes = data.KeyCodes.Fs6;
-    } else if (key == 'F#dim') {
+    } else if (key == "F#dim") {
       codes = data.KeyCodes.Fsdim;
-    } else if (key == 'F#aug') {
+    } else if (key == "F#aug") {
       codes = data.KeyCodes.Fsaug;
-    } else if (key == 'D#m6') {
+    } else if (key == "D#m6") {
       codes = data.KeyCodes.Dsm6;
-    } else if (key == 'Db') {
+    } else if (key == "Db") {
       codes = data.KeyCodes.Db;
-    } else if (key == 'Gb') {
+    } else if (key == "Gb") {
       codes = data.KeyCodes.Gb;
-    } else if (key == 'Ab7') {
+    } else if (key == "Ab7") {
       codes = data.KeyCodes.Ab7;
-    } else if (key == 'Bbm') {
+    } else if (key == "Bbm") {
       codes = data.KeyCodes.Bbm;
-    } else if (key == 'Ebm') {
+    } else if (key == "Ebm") {
       codes = data.KeyCodes.Ebm;
-    } else if (key == 'Fm') {
+    } else if (key == "Fm") {
       codes = data.KeyCodes.Fm;
-    } else if (key == 'Db6') {
+    } else if (key == "Db6") {
       codes = data.KeyCodes.Db6;
-    } else if (key == 'Dbdim') {
+    } else if (key == "Dbdim") {
       codes = data.KeyCodes.Dbdim;
-    } else if (key == 'Dbaug') {
+    } else if (key == "Dbaug") {
       codes = data.KeyCodes.Dbaug;
-    } else if (key == 'Gb6') {
+    } else if (key == "Gb6") {
       codes = data.KeyCodes.Gb6;
-    } else if (key == 'Bbm6') {
+    } else if (key == "Bbm6") {
       codes = data.KeyCodes.Bbm6;
-    } else if (key == 'Ab') {
+    } else if (key == "Ab") {
       codes = data.KeyCodes.Ab;
-    } else if (key == 'Bb7') {
+    } else if (key == "Bb7") {
       codes = data.KeyCodes.Bb7;
-    } else if (key == 'Cm') {
+    } else if (key == "Cm") {
       codes = data.KeyCodes.Cm;
-    } else if (key == 'Eb6') {
+    } else if (key == "Eb6") {
       codes = data.KeyCodes.Eb6;
-    } else if (key == 'Ebdim') {
+    } else if (key == "Ebdim") {
       codes = data.KeyCodes.Ebdim;
-    } else if (key == 'Ebaug') {
+    } else if (key == "Ebaug") {
       codes = data.KeyCodes.Ebaug;
-    } else if (key == 'Ab6') {
+    } else if (key == "Ab6") {
       codes = data.KeyCodes.Ab6;
-    } else if (key == 'Bb') {
+    } else if (key == "Bb") {
       codes = data.KeyCodes.Bb;
-    } else if (key == 'F7') {
+    } else if (key == "F7") {
       codes = data.KeyCodes.F7;
-    } else if (key == 'Bb6') {
+    } else if (key == "Bb6") {
       codes = data.KeyCodes.Bb6;
-    } else if (key == 'Bbdim') {
+    } else if (key == "Bbdim") {
       codes = data.KeyCodes.Bbdim;
-    } else if (key == 'Bbaug') {
+    } else if (key == "Bbaug") {
       codes = data.KeyCodes.Bbaug;
-    } else if (key == 'Gm6') {
+    } else if (key == "Gm6") {
       codes = data.KeyCodes.Gm6;
-    } else if (key == 'C7') {
+    } else if (key == "C7") {
       codes = data.KeyCodes.C7;
-    } else if (key == 'Fdim') {
+    } else if (key == "Fdim") {
       codes = data.KeyCodes.Fdim;
-    } else if (key == 'Faug') {
+    } else if (key == "Faug") {
       codes = data.KeyCodes.Faug;
-    } else if (key == 'Dm6') {
+    } else if (key == "Dm6") {
       codes = data.KeyCodes.Dm6;
     }
 
     dispatch({
-      type: 'SET_CURRENT_CHORD',
+      type: "SET_CURRENT_CHORD",
       chord: codes,
+      chordType: type,
     });
   };
 
@@ -364,8 +365,9 @@ const ChordsView = ({level, mode, props}) => {
     //console.log('release chord');
 
     dispatch({
-      type: 'SET_CURRENT_CHORD',
-      chord: '',
+      type: "SET_CURRENT_CHORD",
+      chord: "",
+      chordType: "",
     });
   };
 
@@ -388,15 +390,17 @@ const ChordsView = ({level, mode, props}) => {
               <View
                 style={{
                   padding: 20,
-                }}>
+                }}
+              >
                 <Text style={styles.headerTxt}>{modename}</Text>
 
                 <View
                   style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
+                    flexDirection: "row",
+                    alignItems: "center",
                     marginBottom: 10,
-                  }}>
+                  }}
+                >
                   <Text style={styles.chordHeader}>Principal Chords</Text>
                 </View>
 
@@ -407,15 +411,17 @@ const ChordsView = ({level, mode, props}) => {
                         <>
                           <TouchableOpacity
                             onPressIn={() => {
-                              showChords(level);
+                              showChords(level, "principal");
                             }}
                             onPressOut={() => {
                               releaseChord();
                             }}
-                            key={index}>
+                            key={index}
+                          >
                             <LinearGradient
-                              colors={['#E2E2E2', '#004DC7']}
-                              style={styles.chordBtn}>
+                              colors={["#E2E2E2", "#004DC7"]}
+                              style={styles.chordBtn}
+                            >
                               <Text style={styles.btnTxt}>{level}</Text>
                             </LinearGradient>
                           </TouchableOpacity>
@@ -427,10 +433,11 @@ const ChordsView = ({level, mode, props}) => {
 
                 <View
                   style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
+                    flexDirection: "row",
+                    alignItems: "center",
                     marginBottom: 10,
-                  }}>
+                  }}
+                >
                   <Text style={styles.chordHeader}>Relative Minor Chords</Text>
                 </View>
 
@@ -441,15 +448,17 @@ const ChordsView = ({level, mode, props}) => {
                         <>
                           <TouchableOpacity
                             onPressIn={() => {
-                              showChords(level);
+                              showChords(level, "relative");
                             }}
                             onPressOut={() => {
                               releaseChord();
                             }}
-                            key={index}>
+                            key={index}
+                          >
                             <LinearGradient
-                              colors={['#E2E2E2', '#FFFE52']}
-                              style={styles.chordBtn}>
+                              colors={["#E2E2E2", "#FFFE52"]}
+                              style={styles.chordBtn}
+                            >
                               <Text style={styles.btnTxt}>{level}</Text>
                             </LinearGradient>
                           </TouchableOpacity>
@@ -461,10 +470,11 @@ const ChordsView = ({level, mode, props}) => {
 
                 <View
                   style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
+                    flexDirection: "row",
+                    alignItems: "center",
                     marginBottom: 10,
-                  }}>
+                  }}
+                >
                   <Text style={styles.chordHeader}>Alternate Chords</Text>
                 </View>
                 {alternateChords ? (
@@ -474,15 +484,17 @@ const ChordsView = ({level, mode, props}) => {
                         <>
                           <TouchableOpacity
                             onPressIn={() => {
-                              showChords(level);
+                              showChords(level, "alternate");
                             }}
                             onPressOut={() => {
                               releaseChord();
                             }}
-                            key={index}>
+                            key={index}
+                          >
                             <LinearGradient
-                              colors={['#E2E2E2', '#1F9714']}
-                              style={styles.chordBtn}>
+                              colors={["#E2E2E2", "#1F9714"]}
+                              style={styles.chordBtn}
+                            >
                               <Text style={styles.btnTxt}>{level}</Text>
                             </LinearGradient>
                           </TouchableOpacity>
@@ -493,17 +505,18 @@ const ChordsView = ({level, mode, props}) => {
                 ) : null}
               </View>
 
-              <View style={{height: 250}} />
+              <View style={{ height: 250 }} />
             </ScrollView>
             <View
               style={{
-                position: 'absolute',
+                position: "absolute",
                 bottom: 0,
                 left: 0,
-                width: '100%',
-                backgroundColor: 'black',
+                width: "100%",
+                backgroundColor: "black",
                 flex: 1,
-              }}>
+              }}
+            >
               {width > 450 ? <KeyboardView2 /> : <KeyboardView />}
             </View>
           </View>
@@ -521,50 +534,50 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, {saveTestScore, saveProgress})(
-  ChordsView,
+export default connect(mapStateToProps, { saveTestScore, saveProgress })(
+  ChordsView
 );
 
-let offset = Dimensions.get('screen').width / 9.2;
+let offset = Dimensions.get("screen").width / 9.2;
 
-let whiteKeyWidth = Dimensions.get('screen').width / 7;
-let blackKeyWidth = Dimensions.get('screen').width / 13;
-let btnWidth = Dimensions.get('screen').width / 3.7;
+let whiteKeyWidth = Dimensions.get("screen").width / 7;
+let blackKeyWidth = Dimensions.get("screen").width / 13;
+let btnWidth = Dimensions.get("screen").width / 3.7;
 
 //blackKeyWidth = 5;
 
 const styles = StyleSheet.create({
   headerTxt: {
-    fontFamily: 'Helvetica Neue',
+    fontFamily: "Helvetica Neue",
     fontSize: 22,
-    fontWeight: 'bold',
-    color: '#3AB24A',
-    width: '95%',
-    textAlign: 'center',
+    fontWeight: "bold",
+    color: "#3AB24A",
+    width: "95%",
+    textAlign: "center",
   },
   chordHeader: {
-    fontFamily: 'Helvetica Neue',
+    fontFamily: "Helvetica Neue",
     fontSize: 18,
     marginTop: 15,
     marginBottom: 5,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    width: '100%',
+    fontWeight: "bold",
+    textAlign: "center",
+    width: "100%",
   },
   btnContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100%',
-    flexWrap: 'wrap',
-    alignItems: 'flex-start',
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+    flexWrap: "wrap",
+    alignItems: "flex-start",
   },
   btnTxt: {
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     padding: 12,
-    textAlign: 'center',
-    color: 'white',
-    textShadowColor: 'rgba(0,0,0,0.65)',
+    textAlign: "center",
+    color: "white",
+    textShadowColor: "rgba(0,0,0,0.65)",
     textShadowRadius: 5,
   },
   chordBtn: {
@@ -572,7 +585,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     width: btnWidth,
     borderRadius: 5,
-    borderColor: 'black',
+    borderColor: "black",
     borderWidth: 2,
     marginRight: 10,
   },
@@ -581,54 +594,54 @@ const styles = StyleSheet.create({
     //position: 'absolute',
     bottom: 0,
     left: 0,
-    width: '100%',
-    backgroundColor: 'white',
+    width: "100%",
+    backgroundColor: "white",
     flex: 1,
   },
   checkbox: {
-    alignSelf: 'center',
+    alignSelf: "center",
   },
   icon: {
-    height: '100%',
+    height: "100%",
     maxHeight: 250,
     width: whiteKeyWidth,
   },
   whiteKey: {
-    height: '100%',
+    height: "100%",
     maxHeight: 250,
     marginRight: 0.5,
   },
-  blackKey: {position: 'absolute', zIndex: 1},
+  blackKey: { position: "absolute", zIndex: 1 },
   blackKey2: {
-    position: 'absolute',
+    position: "absolute",
     zIndex: 1,
     height: 135,
     width: blackKeyWidth,
     left: offset,
   },
   blackKey3: {
-    position: 'absolute',
+    position: "absolute",
     zIndex: 1,
     height: 135,
     width: blackKeyWidth,
     left: offset + whiteKeyWidth,
   },
   blackKey4: {
-    position: 'absolute',
+    position: "absolute",
     zIndex: 1,
     height: 135,
     width: blackKeyWidth,
     left: offset + whiteKeyWidth * 3,
   },
   blackKey5: {
-    position: 'absolute',
+    position: "absolute",
     zIndex: 1,
     height: 135,
     width: blackKeyWidth,
     left: offset + whiteKeyWidth * 4,
   },
   blackKey6: {
-    position: 'absolute',
+    position: "absolute",
     zIndex: 1,
     height: 135,
     width: blackKeyWidth,

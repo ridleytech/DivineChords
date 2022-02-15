@@ -98,11 +98,10 @@ const Header = (props) => {
           top: 30,
         }}
         onPress={() => manageButton()}
-        //onPress={() => goHome()}
       >
         <Image source={showMenu ? null : backIcon} style={{ zIndex: 3 }} />
       </TouchableOpacity>
-      <Text
+      {/* <Text
         style={{
           zIndex: 3,
           //width: 35,
@@ -116,7 +115,7 @@ const Header = (props) => {
         }}
       >
         Version {props.props.currentVersion}
-      </Text>
+      </Text> */}
     </View>
   );
 };
