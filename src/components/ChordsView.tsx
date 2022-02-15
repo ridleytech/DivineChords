@@ -26,6 +26,21 @@ import KeyboardView from "./KeyboardView";
 import KeyboardView2 from "./KeyboardView2";
 import { saveTestScore, saveProgress } from "../thunks/";
 
+import cStaff from "../../images/staff/C-major.png";
+import dStaff from "../../images/staff/D-major.png";
+import eStaff from "../../images/staff/E-major.png";
+import fStaff from "../../images/staff/F-major.png";
+import gStaff from "../../images/staff/G-major.png";
+import aStaff from "../../images/staff/A-major.png";
+import bStaff from "../../images/staff/B-major.png";
+
+import dbStaff from "../../images/staff/D-flat-major.png";
+import ebStaff from "../../images/staff/E-flat-major.png";
+import fsStaff from "../../images/staff/F-sharp-major.png";
+import gbStaff from "../../images/staff/G-flat-major.png";
+import abStaff from "../../images/staff/A-flat-major.png";
+import bbStaff from "../../images/staff/B-flat-major.png";
+
 //https://nicedoc.io/zmxv/react-native-sound
 
 //console.log('data: ' + JSON.stringify(data));
@@ -55,6 +70,8 @@ const ChordsView = ({ level, mode, props }) => {
   const [alternateChords, setAlternateChords] = useState(null);
 
   const [restarted, setRestarted] = useState(false);
+  const [staff1, setStaff] = useState(false);
+
   const opacity = useState(new Animated.Value(0))[0];
 
   const [keyStates, setKeyStates] = useState([
@@ -107,33 +124,52 @@ const ChordsView = ({ level, mode, props }) => {
 
     //console.log('key: ' + key);
     var chords;
+    var staff;
 
     if (key == "C") {
       chords = data.DivineChords.C;
+      staff = cStaff;
     } else if (key == "G") {
       chords = data.DivineChords.G;
+      staff = gStaff;
     } else if (key == "D") {
       chords = data.DivineChords.D;
+      staff = dStaff;
     } else if (key == "A") {
       chords = data.DivineChords.A;
+      staff = aStaff;
     } else if (key == "E") {
       chords = data.DivineChords.E;
+      staff = eStaff;
     } else if (key == "B") {
       chords = data.DivineChords.B;
+      staff = bStaff;
     } else if (key == "F#") {
       chords = data.DivineChords.Fs;
+      staff = fsStaff;
     } else if (key == "Db") {
       chords = data.DivineChords.Db;
+      staff = dbStaff;
     } else if (key == "Eb") {
       chords = data.DivineChords.Eb;
+      staff = ebStaff;
     } else if (key == "Bb") {
       chords = data.DivineChords.Bb;
+      staff = bbStaff;
+    } else if (key == "Gb") {
+      chords = data.DivineChords.Gb;
+      staff = gbStaff;
+    } else if (key == "Ab") {
+      chords = data.DivineChords.Ab;
+      staff = abStaff;
     } else if (key == "F") {
       chords = data.DivineChords.F;
+      staff = fStaff;
     }
     setPrincipalChords(chords.principal);
     setRelativeChords(chords.relative);
     setAlternateChords(chords.alternate);
+    setStaff(staff);
 
     //console.log('chords: ' + JSON.stringify(chords));
     //console.log('chords: ' + JSON.stringify(chords));
@@ -390,9 +426,12 @@ const ChordsView = ({ level, mode, props }) => {
               <View
                 style={{
                   padding: 20,
+                  display: "flex",
+                  alignItems: "center",
                 }}
               >
                 <Text style={styles.headerTxt}>{modename}</Text>
+                <Image source={staff1} style={styles.staffImg} />
 
                 <View
                   style={{
@@ -554,6 +593,10 @@ const styles = StyleSheet.create({
     color: "#3AB24A",
     width: "95%",
     textAlign: "center",
+  },
+  staffImg: {
+    width: 100,
+    height: 100,
   },
   chordHeader: {
     fontFamily: "Helvetica Neue",

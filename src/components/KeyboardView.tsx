@@ -108,6 +108,8 @@ const KeyboardView = () => {
   const pressKey = (key: number) => {
     //console.log("key kv1: " + key);
 
+    return;
+
     if (!playSounds) {
       return;
     }
@@ -209,6 +211,18 @@ const KeyboardView = () => {
               : styles.icon
           }
         />
+        {/* <View
+          style={{
+            width: 25,
+            height: 25,
+            borderRadius: 13,
+            bottom: 10,
+            position: "absolute",
+            left: "15%",
+            alignItems: "center",
+            backgroundColor: "red",
+          }}
+        /> */}
       </View>
       <View
         onTouchStart={() => pressKey(1)}
