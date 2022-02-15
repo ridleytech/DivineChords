@@ -24,6 +24,7 @@ const KeyboardView = () => {
   const currentChord = useSelector((state) => state.currentChord);
   const currentChordType = useSelector((state) => state.currentChordType);
   const playSounds = useSelector((state) => state.playSounds);
+  const showNotes = useSelector((state) => state.showNotes);
 
   const [keyStates, setKeyStates] = useState([
     false,
@@ -186,6 +187,12 @@ const KeyboardView = () => {
     }
   }, [currentChord]);
 
+  useEffect(() => {
+    if (showNotes) {
+      console.log("notes changed");
+    }
+  }, [showNotes]);
+
   return (
     <View
       style={{
@@ -211,7 +218,7 @@ const KeyboardView = () => {
               : styles.icon
           }
         />
-        {/* <View
+        <View
           style={{
             width: 25,
             height: 25,
@@ -221,8 +228,9 @@ const KeyboardView = () => {
             left: "15%",
             alignItems: "center",
             backgroundColor: "red",
+            display: showNotes ? "flex" : "none",
           }}
-        /> */}
+        />
       </View>
       <View
         onTouchStart={() => pressKey(1)}

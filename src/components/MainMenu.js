@@ -145,7 +145,7 @@ const MainMenu = ({ setMode }) => {
           width: "100%",
         }}
       >
-        <Text
+        {/* <Text
           style={{
             fontFamily: "Helvetica Neue",
             fontSize: 20,
@@ -155,7 +155,7 @@ const MainMenu = ({ setMode }) => {
           }}
         >
           Divine Chords
-        </Text>
+        </Text> */}
 
         {/* <View
           style={{
@@ -183,7 +183,7 @@ const MainMenu = ({ setMode }) => {
           </Text>
         </View> */}
         {/* <Image source={videoImg} style={styles.video} /> */}
-        <Animated.View style={{ marginTop: 25, opacity: opacity }}>
+        <Animated.View style={{ opacity: opacity }}>
           <View
             style={{
               backgroundColor: "#3AB24A",

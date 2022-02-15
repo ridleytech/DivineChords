@@ -11,6 +11,7 @@ import bgImg from "../../images/piano-bg.png";
 import headerLogo from "../../images/header-logo.png";
 import menuIcon from "../../images/menu-icon.png";
 import backIcon from "../../images/back-btn.png";
+import notesImg from "../../images/music-note-icon.png";
 import { useSelector, useDispatch } from "react-redux";
 
 const Header = (props) => {
@@ -25,43 +26,46 @@ const Header = (props) => {
   const intervalmode = useSelector((state) => state.intervalmode);
   const leaderboardMode = useSelector((state) => state.leaderboardMode);
 
+  const showNotes = useSelector((state) => state.showNotes);
+
   const goHome = () => {
     dispatch({ type: "SET_MODE", mode: 0 });
     dispatch({ type: "SET_LEVEL", level: 0 });
   };
 
   var showMenu = false;
+  var showNotesMenu = false;
 
   if (mode == 0 && leaderboardMode == 0) {
     showMenu = true;
   }
 
+  if (mode > 0) {
+    showNotesMenu = true;
+  }
+
   const manageButton = () => {
     //console.log('manageButton');
 
-    if (leaderboardMode > 0) {
-      dispatch({ type: "SET_LEADERBOARD_MODE", mode: 0 });
-    } else if (mode == 0) {
+    if (mode == 0) {
       props.props.navigation.toggleDrawer();
-    } else if (mode == 1 && level > 0) {
-      dispatch({ type: "SET_MODE", mode: 1 });
-      dispatch({ type: "SET_LEVEL", level: 0 });
-    } else if (mode == 2 && intervalmode > 0) {
-      dispatch({ type: "SET_INTERVAL_MODE", mode: 0 });
-      dispatch({ type: "SET_LEVEL", level: 0 });
-    } else if (mode == 3 && triadmode > 0) {
-      dispatch({ type: "SET_TRIAD_MODE", mode: 0 });
-      dispatch({ type: "SET_LEVEL", level: 0 });
     } else {
       dispatch({ type: "SET_MODE", mode: 0 });
       dispatch({ type: "SET_LEVEL", level: 0 });
-      dispatch({ type: "SET_TRIAD_MODE", mode: 0 });
-      dispatch({ type: "SET_INTERVAL_MODE", mode: 0 });
-      dispatch({ type: "SET_LEADERBOARD_MODE", mode: 0 });
     }
-
-    //props.props.navigation.toggleDrawer();
   };
+
+  manageNotes = () => {
+    dispatch({ type: "SHOW_NOTES", status: showNotes ? 0 : 1 });
+  };
+
+  // const displayNotes = () => {
+  //   dispatch({ type: "SHOW_NOTES", status: 1 });
+  // };
+
+  // const hideNotes = () => {
+  //   dispatch({ type: "SHOW_NOTES", status: 0 });
+  // };
 
   return (
     <View style={{ height: 100 }}>
@@ -101,6 +105,21 @@ const Header = (props) => {
       >
         <Image source={showMenu ? null : backIcon} style={{ zIndex: 3 }} />
       </TouchableOpacity>
+
+      <TouchableOpacity
+        style={{
+          zIndex: 3,
+          width: 35,
+          height: 35,
+          position: "absolute",
+          right: 20,
+          top: 30,
+        }}
+        onPress={() => manageNotes()}
+      >
+        <Image source={showNotesMenu ? notesImg : null} style={{ zIndex: 3 }} />
+      </TouchableOpacity>
+
       {/* <Text
         style={{
           zIndex: 3,

@@ -52,6 +52,7 @@ const inititalState = {
   currentChord: "",
   currentChordType: "",
   playSounds: true,
+  showNotes: false,
 };
 
 export default (state = inititalState, action) => {
@@ -287,6 +288,14 @@ export default (state = inititalState, action) => {
       return {
         ...state,
         graphStarted: action.status,
+      };
+
+    case "SHOW_NOTES":
+      //console.log('MANAGE_GRAPH: ' + JSON.stringify(action));
+
+      return {
+        ...state,
+        showNotes: action.status,
       };
 
     case "PROGRESS_INFO":
