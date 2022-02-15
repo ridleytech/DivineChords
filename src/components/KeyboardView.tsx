@@ -23,6 +23,7 @@ const KeyboardView = () => {
 
   const currentChord = useSelector((state) => state.currentChord);
   const currentChordType = useSelector((state) => state.currentChordType);
+  const playSounds = useSelector((state) => state.playSounds);
 
   const [keyStates, setKeyStates] = useState([
     false,
@@ -48,8 +49,68 @@ const KeyboardView = () => {
   //   //var chords = key.split(',');
   // };
 
+  const playChords = (chords: Int8Array) => {
+    console.log("play chords: " + chords);
+
+    if (!playSounds) {
+      return;
+    }
+
+    //return;
+
+    chords.forEach((key) => {
+      if (Platform.OS === "ios") {
+        testView.playKey(key).then((result) => {
+          //console.log('show', result);
+        });
+      } else {
+        //console.log("android down")
+
+        //testView.playKey(key);
+
+        testView.playKeyCB(
+          key,
+          (msg) => {
+            console.log("error: " + msg);
+          },
+          (response) => {
+            console.log("response: " + response);
+          }
+        );
+      }
+    });
+
+    setTimeout(() => {
+      chords.forEach((key) => {
+        if (Platform.OS === "ios") {
+          testView.releaseKey(key).then((result) => {
+            //console.log('show', result);
+          });
+        } else {
+          //console.log("android down")
+
+          //testView.playKey(key);
+
+          testView.releaseKey(
+            key,
+            (msg) => {
+              console.log("error: " + msg);
+            },
+            (response) => {
+              console.log("response: " + response);
+            }
+          );
+        }
+      });
+    }, 1500);
+  };
+
   const pressKey = (key: number) => {
     //console.log("key kv1: " + key);
+
+    if (!playSounds) {
+      return;
+    }
 
     var sc = keyStates.slice();
 
@@ -105,6 +166,8 @@ const KeyboardView = () => {
       //console.log('currentChord kbv: ' + currentChord);
 
       // console.log('codes kbv: ' + JSON.stringify(codes));
+
+      playChords(currentChord);
 
       currentChord.forEach((element) => {
         sc[element] = true;

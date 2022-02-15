@@ -51,6 +51,7 @@ const inititalState = {
   loginErrorMsg: "",
   currentChord: "",
   currentChordType: "",
+  playSounds: true,
 };
 
 export default (state = inititalState, action) => {
