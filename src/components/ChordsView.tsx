@@ -24,6 +24,7 @@ import data from "../data/questions.json";
 import Instructions from "./Instructions";
 import KeyboardView from "./KeyboardView";
 import KeyboardView2 from "./KeyboardView2";
+import KeyboardView3 from "./KeyboardView3";
 import { saveTestScore, saveProgress } from "../thunks/";
 
 import cStaff from "../../images/staff/C-major.png";
@@ -431,7 +432,9 @@ const ChordsView = ({ level, mode, props }) => {
                 }}
               >
                 <Text style={styles.headerTxt}>{modename}</Text>
-                <Image source={staff1} style={styles.staffImg} />
+                {staff1 ? (
+                  <Image source={staff1} style={styles.staffImg} />
+                ) : null}
 
                 <View
                   style={{
@@ -444,29 +447,32 @@ const ChordsView = ({ level, mode, props }) => {
                 </View>
 
                 {principalChords ? (
-                  <View style={styles.btnContainer}>
-                    {principalChords.map((level, index) => {
-                      return (
-                        <>
+                  <View>
+                    <View style={styles.btnContainer}>
+                      {principalChords.map((level, index) => {
+                        return (
                           <TouchableOpacity
+                            key={level}
                             onPressIn={() => {
                               showChords(level, "principal");
                             }}
                             onPressOut={() => {
                               releaseChord();
                             }}
-                            key={index}
                           >
                             <LinearGradient
                               colors={["#E2E2E2", "#004DC7"]}
                               style={styles.chordBtn}
+                              key={level + 1}
                             >
-                              <Text style={styles.btnTxt}>{level}</Text>
+                              <Text key={level + 2} style={styles.btnTxt}>
+                                {level}
+                              </Text>
                             </LinearGradient>
                           </TouchableOpacity>
-                        </>
-                      );
-                    })}
+                        );
+                      })}
+                    </View>
                   </View>
                 ) : null}
 
@@ -481,29 +487,32 @@ const ChordsView = ({ level, mode, props }) => {
                 </View>
 
                 {relativeChords ? (
-                  <View style={styles.btnContainer}>
-                    {relativeChords.map((level, index) => {
-                      return (
-                        <>
+                  <View>
+                    <View style={styles.btnContainer}>
+                      {relativeChords.map((level, index) => {
+                        return (
                           <TouchableOpacity
+                            key={level}
                             onPressIn={() => {
                               showChords(level, "relative");
                             }}
                             onPressOut={() => {
                               releaseChord();
                             }}
-                            key={index}
                           >
                             <LinearGradient
                               colors={["#E2E2E2", "#FFFE52"]}
                               style={styles.chordBtn}
+                              key={level + 1}
                             >
-                              <Text style={styles.btnTxt}>{level}</Text>
+                              <Text style={styles.btnTxt} key={level + 2}>
+                                {level}
+                              </Text>
                             </LinearGradient>
                           </TouchableOpacity>
-                        </>
-                      );
-                    })}
+                        );
+                      })}
+                    </View>
                   </View>
                 ) : null}
 
@@ -517,29 +526,32 @@ const ChordsView = ({ level, mode, props }) => {
                   <Text style={styles.chordHeader}>Alternate Chords</Text>
                 </View>
                 {alternateChords ? (
-                  <View style={styles.btnContainer}>
-                    {alternateChords.map((level, index) => {
-                      return (
-                        <>
+                  <View>
+                    <View style={styles.btnContainer}>
+                      {alternateChords.map((level, index) => {
+                        return (
                           <TouchableOpacity
+                            key={level}
                             onPressIn={() => {
                               showChords(level, "alternate");
                             }}
                             onPressOut={() => {
                               releaseChord();
                             }}
-                            key={index}
                           >
                             <LinearGradient
                               colors={["#E2E2E2", "#1F9714"]}
                               style={styles.chordBtn}
+                              key={level + 1}
                             >
-                              <Text style={styles.btnTxt}>{level}</Text>
+                              <Text style={styles.btnTxt} key={level + 2}>
+                                {level}
+                              </Text>
                             </LinearGradient>
                           </TouchableOpacity>
-                        </>
-                      );
-                    })}
+                        );
+                      })}
+                    </View>
                   </View>
                 ) : null}
               </View>
@@ -613,6 +625,7 @@ const styles = StyleSheet.create({
     width: "100%",
     flexWrap: "wrap",
     alignItems: "flex-start",
+    //backgroundColor: "red",
   },
   btnTxt: {
     fontSize: 30,
