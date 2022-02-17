@@ -94,15 +94,7 @@ const KeyboardView = () => {
 
           //testView.playKey(key);
 
-          testView.releaseKey(
-            key,
-            (msg) => {
-              console.log("error: " + msg);
-            },
-            (response) => {
-              console.log("response: " + response);
-            }
-          );
+          testView.releaseKey(key);
         }
       });
     }, 1500);
@@ -150,6 +142,8 @@ const KeyboardView = () => {
   };
 
   const releaseKey = (key: number) => {
+    return;
+
     var sc = keyStates.slice();
 
     sc[key] = false;
@@ -233,6 +227,8 @@ const KeyboardView = () => {
           display: "flex",
           flex: 1,
           flexDirection: "row",
+          //justifyContent: "center",
+          //alignContent: "center",
         }}
       >
         {/* {list.map((a, ind) => {
@@ -278,7 +274,11 @@ const KeyboardView = () => {
               },
             ]}
           >
-            <Text style={{ fontSize: 25, fontWeight: "bold" }}>C</Text>
+            <Text
+              style={{ fontSize: 25, fontWeight: "bold", textAlign: "center" }}
+            >
+              C
+            </Text>
           </View>
         </View>
         <View
@@ -730,19 +730,23 @@ let blackKeyWidth = Dimensions.get("screen").width / 10;
 
 const styles = StyleSheet.create({
   whiteKeyView: {
-    width: 25,
+    width: "100%",
     height: 35,
     bottom: 20,
     position: "absolute",
-    left: "20%",
+    //left: "20%",
     alignItems: "center",
+    //backgroundColor: "red",
+    justifyContent: "center",
+    alignContent: "center",
   },
   accidentalView: {
+    width: "100%",
     height: 55,
     bottom: 0,
     position: "absolute",
     alignItems: "center",
-    width: 30,
+    //width: 30,
     //backgroundColor: "red",
   },
   accidentalTxt: {
@@ -765,8 +769,9 @@ const styles = StyleSheet.create({
     height: "100%",
     maxHeight: 250,
     width: whiteKeyWidth,
+    tintColor: "white",
   },
-  iconBlack: {},
+  iconBlack: { tintColor: "black" },
   iconGreenBlack: {
     tintColor: "rgba(31, 151, 20,1)",
     borderColor: "black",
@@ -820,43 +825,43 @@ const styles = StyleSheet.create({
   blackKey2: {
     position: "absolute",
     zIndex: 1,
-    width: blackKeyWidth,
+    //width: blackKeyWidth,
     left: offset,
   },
   blackKey3: {
     position: "absolute",
     zIndex: 1,
     left: offset + whiteKeyWidth,
-    width: blackKeyWidth,
+    //width: blackKeyWidth,
   },
   blackKey4: {
     position: "absolute",
     zIndex: 1,
     left: offset + whiteKeyWidth * 3,
-    width: blackKeyWidth,
+    //width: blackKeyWidth,
   },
   blackKey5: {
     position: "absolute",
     zIndex: 1,
     left: offset + whiteKeyWidth * 4,
-    width: blackKeyWidth,
+    //width: blackKeyWidth,
   },
   blackKey6: {
     position: "absolute",
     zIndex: 1,
     left: offset + whiteKeyWidth * 5,
-    width: blackKeyWidth,
+    //width: blackKeyWidth,
   },
   blackKey7: {
     position: "absolute",
     zIndex: 1,
     left: offset + whiteKeyWidth * 7.05,
-    width: blackKeyWidth,
+    //width: blackKeyWidth,
   },
   blackKey8: {
     position: "absolute",
     zIndex: 1,
     left: offset + whiteKeyWidth * 8.1,
-    width: blackKeyWidth,
+    //width: blackKeyWidth,
   },
 });

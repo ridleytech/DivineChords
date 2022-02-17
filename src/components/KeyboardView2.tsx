@@ -83,15 +83,7 @@ const KeyboardView2 = () => {
 
           //testView.playKey(key);
 
-          testView.releaseKey(
-            key,
-            (msg) => {
-              console.log("error: " + msg);
-            },
-            (response) => {
-              console.log("response: " + response);
-            }
-          );
+          testView.releaseKey(key);
         }
       });
     }, 1500);
@@ -129,6 +121,7 @@ const KeyboardView2 = () => {
   };
 
   const releaseKey = (key: number) => {
+    return;
     var sc = keyStates.slice();
 
     sc[key] = false;
@@ -224,15 +217,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>C</Text>
             </View>
@@ -255,25 +245,14 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                height: 55,
-                bottom: 20,
-                position: "absolute",
-                left: 0,
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.accidentalView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                C# Db
-              </Text>
+              <Text style={styles.accidentalTxt}>C# Db</Text>
             </View>
           </View>
           <View
@@ -294,15 +273,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>D</Text>
             </View>
@@ -325,25 +301,14 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                height: 55,
-                bottom: 20,
-                position: "absolute",
-                left: 0,
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.accidentalView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                D# Eb
-              </Text>
+              <Text style={styles.accidentalTxt}>D# Eb</Text>
             </View>
           </View>
           <View
@@ -364,15 +329,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>E</Text>
             </View>
@@ -395,15 +357,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>F</Text>
             </View>
@@ -426,25 +385,14 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                height: 55,
-                bottom: 20,
-                position: "absolute",
-                left: 0,
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.accidentalView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                F# Gb
-              </Text>
+              <Text style={styles.accidentalTxt}>F# Gb</Text>
             </View>
           </View>
           <View
@@ -465,15 +413,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>G</Text>
             </View>
@@ -496,25 +441,14 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                height: 55,
-                bottom: 20,
-                position: "absolute",
-                left: 0,
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.accidentalView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                G# Ab
-              </Text>
+              <Text style={styles.accidentalTxt}>G# Ab</Text>
             </View>
           </View>
           <View
@@ -535,15 +469,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>A</Text>
             </View>
@@ -566,25 +497,14 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                height: 55,
-                bottom: 20,
-                position: "absolute",
-                left: 0,
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.accidentalView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                A# Bb
-              </Text>
+              <Text style={styles.accidentalTxt}>A# Bb</Text>
             </View>
           </View>
           <View
@@ -605,15 +525,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>B</Text>
             </View>
@@ -636,15 +553,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>C</Text>
             </View>
@@ -667,25 +581,14 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                height: 55,
-                bottom: 20,
-                position: "absolute",
-                left: 0,
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.accidentalView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                C# Db
-              </Text>
+              <Text style={styles.accidentalTxt}>C# Db</Text>
             </View>
           </View>
           <View
@@ -706,15 +609,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>D</Text>
             </View>
@@ -737,25 +637,14 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                height: 55,
-                bottom: 20,
-                position: "absolute",
-                left: 0,
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.accidentalView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                D# Eb
-              </Text>
+              <Text style={styles.accidentalTxt}>D# Eb</Text>
             </View>
           </View>
           <View
@@ -776,15 +665,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>E</Text>
             </View>
@@ -807,15 +693,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>F</Text>
             </View>
@@ -838,25 +721,14 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                height: 55,
-                bottom: 20,
-                position: "absolute",
-                left: 0,
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.accidentalView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                F# Gb
-              </Text>
+              <Text style={styles.accidentalTxt}>F# Gb</Text>
             </View>
           </View>
           <View
@@ -877,15 +749,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>G</Text>
             </View>
@@ -908,25 +777,14 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                height: 55,
-                bottom: 20,
-                position: "absolute",
-                left: 0,
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.accidentalView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                G# Ab
-              </Text>
+              <Text style={styles.accidentalTxt}>G# Ab</Text>
             </View>
           </View>
           <View
@@ -947,15 +805,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>A</Text>
             </View>
@@ -978,25 +833,14 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                height: 55,
-                bottom: 20,
-                position: "absolute",
-                left: 0,
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.accidentalView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
-              <Text
-                style={{
-                  fontSize: 15,
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                A# Bb
-              </Text>
+              <Text style={styles.accidentalTxt}>A# Bb</Text>
             </View>
           </View>
           <View
@@ -1017,15 +861,12 @@ const KeyboardView2 = () => {
               }
             />
             <View
-              style={{
-                width: 25,
-                height: 35,
-                bottom: 20,
-                position: "absolute",
-                left: "30%",
-                alignItems: "center",
-                display: showNotes ? "flex" : "none",
-              }}
+              style={[
+                styles.whiteKeyView,
+                {
+                  display: showNotes ? "flex" : "none",
+                },
+              ]}
             >
               <Text style={{ fontSize: 35, fontWeight: "bold" }}>B</Text>
             </View>
@@ -1109,6 +950,23 @@ var blackKeyWidth = Dimensions.get("screen").width / 12;
 // console.log('black key width kb2: ' + blackKeyWidth);
 
 const styles = StyleSheet.create({
+  whiteKeyView: {
+    width: "100%",
+    height: 35,
+    bottom: 20,
+    position: "absolute",
+    //left: "30%",
+    alignItems: "center",
+    //backgroundColor: "red",
+    justifyContent: "center",
+    alignContent: "center",
+  },
+  accidentalTxt: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "white",
+    textAlign: "center",
+  },
   mainContainer: {
     //backgroundColor: 'yellow',
     //position: 'absolute',
@@ -1125,12 +983,15 @@ const styles = StyleSheet.create({
     height: "100%",
     maxHeight: 250,
     width: whiteKeyWidth,
+    tintColor: "white",
+    //borderWidth: 1,
   },
   whiteKey: {
     height: "100%",
     maxHeight: 250,
     //marginRight: 0.5,
     width: whiteKeyWidth,
+    borderWidth: 1,
   },
   blackKey2: {
     position: "absolute",
@@ -1251,4 +1112,14 @@ const styles = StyleSheet.create({
     // borderBottomLeftRadius: 1,
     // borderBottomRightRadius: 1,
   },
+  accidentalView: {
+    width: "100%",
+
+    height: 55,
+    bottom: 20,
+    position: "absolute",
+    //left: 0,
+    alignItems: "center",
+  },
+  iconBlack: { tintColor: "black" },
 });
