@@ -1,2 +1,3 @@
 https://stackoverflow.com/questions/63376471/react-native-build-error-on-ios-typedef-redefinition-with-different-types-ui
 https://stackoverflow.com/questions/66019068/event2-event-config-h-file-not-found
+https://betterprogramming.pub/react-native-in-app-purchase-subscription-bb7ad18ec5a0

@@ -129,12 +129,14 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.pianolessons"
+        applicationId "com.divinechords"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 25
-        versionName "1.1"
+        versionCode 1
+        versionName "1.0"
         multiDexEnabled true
+        missingDimensionStrategy 'react-native-camera', 'general'
+        missingDimensionStrategy 'store', 'play'
     }
     splits {
         abi {
