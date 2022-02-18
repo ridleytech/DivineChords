@@ -19,10 +19,13 @@ import BlackGreenIcon from "../../images/black-green.png";
 var testView = NativeModules.PlayKey;
 
 const KeyboardView2 = () => {
+  const dispatch = useDispatch();
+
   const currentChord = useSelector((state) => state.currentChord);
   const currentChordType = useSelector((state) => state.currentChordType);
   const playSounds = useSelector((state) => state.playSounds);
   const showNotes = useSelector((state) => state.showNotes);
+  const upgraded = useSelector((state) => state.upgraded);
 
   const [keyStates, setKeyStates] = useState([
     false,
@@ -44,7 +47,7 @@ const KeyboardView2 = () => {
   const playChords = (chords: Int8Array) => {
     console.log("play chords: " + chords);
 
-    if (!playSounds) {
+    if (!upgraded || !playSounds) {
       return;
     }
 
@@ -180,6 +183,22 @@ const KeyboardView2 = () => {
       console.log("notes changed");
     }
   }, [showNotes]);
+
+  // useEffect(() => {
+  //   var sc = keyStates.slice();
+
+  //   sc[0] = true;
+  //   sc[4] = true;
+  //   sc[7] = true;
+
+  //   setKeyStates(sc);
+
+  //   dispatch({
+  //     type: "SET_CURRENT_CHORD",
+  //     chord: "",
+  //     chordType: "principal",
+  //   });
+  // }, []);
 
   return (
     <>

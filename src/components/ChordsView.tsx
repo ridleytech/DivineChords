@@ -14,6 +14,7 @@ import {
   Alert,
   Linking,
 } from "react-native";
+
 import LinearGradient from "react-native-linear-gradient";
 
 import { useDispatch, useSelector, connect } from "react-redux";
@@ -75,33 +76,6 @@ const ChordsView = ({ level, mode, props }) => {
 
   const opacity = useState(new Animated.Value(0))[0];
 
-  const [keyStates, setKeyStates] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
-
   useEffect(() => {
     //console.log('pitch level changed');
     //populateInstructions();
@@ -121,6 +95,25 @@ const ChordsView = ({ level, mode, props }) => {
   var modename = level1[mode] + " Major";
 
   useEffect(() => {
+    initChordData();
+    //getStuff();
+    //initIAP();
+
+    return function cleanup() {
+      //console.log("will unmount");
+    };
+  }, []);
+
+  //unmount
+
+  // useEffect(
+  //   () => () => {
+  //     //console.log("unmount");
+  //   },
+  //   []
+  // );
+
+  const initChordData = () => {
     var key = level1[mode];
 
     //console.log('key: ' + key);
@@ -174,7 +167,7 @@ const ChordsView = ({ level, mode, props }) => {
 
     //console.log('chords: ' + JSON.stringify(chords));
     //console.log('chords: ' + JSON.stringify(chords));
-  }, []);
+  };
 
   useEffect(() => {
     if (alternateChords) {
@@ -193,24 +186,6 @@ const ChordsView = ({ level, mode, props }) => {
       //console.log('relative: ' + JSON.stringify(relativeChords));
     }
   }, [relativeChords]);
-
-  const populateInstructions = () => {
-    var instructions; // = data.Interval.level3Instructions;
-
-    if (mode == 1) {
-      instructions = data.Pitch.level1Instructions;
-    } else if (mode == 2) {
-      instructions = data.Pitch.level2Instructions;
-    } else if (mode == 3) {
-      instructions = data.Pitch.level3Instructions;
-    } else if (mode == 4) {
-      instructions = data.Pitch.level4Instructions;
-    } else if (mode == 5) {
-      instructions = data.Pitch.level5Instructions;
-    }
-
-    setInstructions(instructions);
-  };
 
   const showChords = (key, type) => {
     //console.log('press chord: ' + key);

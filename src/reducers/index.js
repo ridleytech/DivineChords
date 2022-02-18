@@ -53,6 +53,8 @@ const inititalState = {
   currentChordType: "",
   playSounds: true,
   showNotes: false,
+  upgraded: true,
+  productList: [],
 };
 
 export default (state = inititalState, action) => {
@@ -114,6 +116,33 @@ export default (state = inititalState, action) => {
         ...state,
         loginError: true,
         loginEnabled: true,
+      };
+
+    case "SAVE_PURCHASES":
+      return {
+        ...state,
+        receipt: action.payload.receipt,
+        upgraded: true,
+      };
+
+    case "PRODUCT_LIST":
+      //console.log("payload: " + JSON.stringify(action));
+      return {
+        ...state,
+        productList: action.productList,
+      };
+
+    case "UPGRADE":
+      return {
+        ...state,
+        upgraded: true,
+        playSounds: true,
+      };
+
+    case "MANAGE_SOUND":
+      return {
+        ...state,
+        playSounds: action.status,
       };
 
     case "RESET_LEADER_DATA":

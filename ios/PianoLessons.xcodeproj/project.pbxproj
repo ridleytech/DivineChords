@@ -21,6 +21,8 @@
 		3F20B53A25A54C8600192C86 /* fix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20B53925A54C8600192C86 /* fix.swift */; };
 		3F20B53B25A54C8600192C86 /* fix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20B53925A54C8600192C86 /* fix.swift */; };
 		3F877FC02642CE09000BB753 /* Chateau Grand-v1.8.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3F877FBF2642CE08000BB753 /* Chateau Grand-v1.8.sf2 */; };
+		3F95C24B27BECDB500F0291F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F95C24A27BECDB500F0291F /* StoreKit.framework */; };
+		3F95C25227BEFE6A00F0291F /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 3F95C25127BEFE6A00F0291F /* Configuration.storekit */; };
 		462CA3D40BE84B24BD38A183 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47BFEA39EBD4117A67D7CA7 /* Foundation.ttf */; };
 		55F28F0EC6BF4C169126F99B /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FFDB5FEB9AE4F1398BC3F05 /* MaterialCommunityIcons.ttf */; };
 		6083A6BE978E46C9BAC76FD6 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AA1748A274476B8B02224 /* FontAwesome5_Solid.ttf */; };
@@ -88,6 +90,8 @@
 		3F20B53825A54C8600192C86 /* PianoLessons-tvOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PianoLessons-tvOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		3F20B53925A54C8600192C86 /* fix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fix.swift; sourceTree = "<group>"; };
 		3F877FBF2642CE08000BB753 /* Chateau Grand-v1.8.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chateau Grand-v1.8.sf2"; sourceTree = "<group>"; };
+		3F95C24A27BECDB500F0291F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3F95C25127BEFE6A00F0291F /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = Configuration.storekit; path = PianoLessons/Configuration.storekit; sourceTree = "<group>"; };
 		3FFC9FD825BE6FB20078D105 /* AppCenter-Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppCenter-Config.plist"; sourceTree = "<group>"; };
 		4864F74B2CBC420E8176A0B8 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		4BB9DA7342199582CE5AB1AA /* Pods-PianoLessons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PianoLessons.release.xcconfig"; path = "Target Support Files/Pods-PianoLessons/Pods-PianoLessons.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				240AEC46BC63C00B98FBB0D0 /* libPods-PianoLessons.a in Frameworks */,
+				3F95C24B27BECDB500F0291F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +179,7 @@
 		13B07FAE1A68108700A75B9A /* PianoLessons */ = {
 			isa = PBXGroup;
 			children = (
+				3F95C25127BEFE6A00F0291F /* Configuration.storekit */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -195,6 +201,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F95C24A27BECDB500F0291F /* StoreKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2C3E3525B8E01DCEE8683AB5 /* libPods-PianoLessons.a */,
@@ -437,6 +444,7 @@
 				FDA750666CCB466086770CF7 /* FontAwesome5_Regular.ttf in Resources */,
 				6083A6BE978E46C9BAC76FD6 /* FontAwesome5_Solid.ttf in Resources */,
 				636D213A3B5242F18F3A972C /* Fontisto.ttf in Resources */,
+				3F95C25227BEFE6A00F0291F /* Configuration.storekit in Resources */,
 				462CA3D40BE84B24BD38A183 /* Foundation.ttf in Resources */,
 				8AE94B6F4C6448CC85AC4025 /* Ionicons.ttf in Resources */,
 				55F28F0EC6BF4C169126F99B /* MaterialCommunityIcons.ttf in Resources */,

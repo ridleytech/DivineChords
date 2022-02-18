@@ -1,3 +1,13 @@
 https://stackoverflow.com/questions/63376471/react-native-build-error-on-ios-typedef-redefinition-with-different-types-ui
 https://stackoverflow.com/questions/66019068/event2-event-config-h-file-not-found
 https://betterprogramming.pub/react-native-in-app-purchase-subscription-bb7ad18ec5a0
+
+
+https://github.com/dooboolab/react-native-iap/issues/1065
+https://react-native-iap.dooboolab.com/docs/troubleshooting/
+https://github.com/dooboolab/react-native-iap/issues
+
+https://codewithghazi.com/componentwillunmount-with-react-hooks/
+in-app purchases: https://www.youtube.com/watch?v=KSI4oPDx14k
+
+You are dangerously allowing react-native-iap to finish your transaction automatically. You should set andDangerouslyFinishTransactionAutomatically to false when calling requestPurchase and call finishTransaction manually when you have delivered the purchased goods to the user. It defaults to true to provide backwards compatibility. Will default to false in version 4.0.0.
