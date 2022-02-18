@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PianoLessons.xcodeproj">
+      location = "group:/Users/randallridley/Documents/React Native Projects/DivineChords/ios/DivineChords.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

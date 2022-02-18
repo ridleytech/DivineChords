@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
                BuildableName = "ActiveEar.app"
-               BlueprintName = "PianoLessons"
-               ReferencedContainer = "container:PianoLessons.xcodeproj">
+               BlueprintName = "DivineChords"
+               ReferencedContainer = "container:DivineChords.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "PianoLessonsTests.xctest"
-               BlueprintName = "PianoLessonsTests"
-               ReferencedContainer = "container:PianoLessons.xcodeproj">
+               BuildableName = "DivineChordsTests.xctest"
+               BlueprintName = "DivineChordsTests"
+               ReferencedContainer = "container:DivineChords.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -56,8 +56,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "ActiveEar.app"
-            BlueprintName = "PianoLessons"
-            ReferencedContainer = "container:PianoLessons.xcodeproj">
+            BlueprintName = "DivineChords"
+            ReferencedContainer = "container:DivineChords.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
@@ -76,8 +76,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "ActiveEar.app"
-            BlueprintName = "PianoLessons"
-            ReferencedContainer = "container:PianoLessons.xcodeproj">
+            BlueprintName = "DivineChords"
+            ReferencedContainer = "container:DivineChords.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

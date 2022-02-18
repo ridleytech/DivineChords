@@ -66,7 +66,7 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* PianoLessonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PianoLessonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* DivineChordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DivineChordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PianoLessonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PianoLessonsTests.m; sourceTree = "<group>"; };
 		0EF7C31F3BBE4F9A992A8546 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -80,8 +80,8 @@
 		1FFDB5FEB9AE4F1398BC3F05 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		279A6EF62A38448DA24A1AB8 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		2C3E3525B8E01DCEE8683AB5 /* libPods-PianoLessons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PianoLessons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* PianoLessons-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PianoLessons-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* PianoLessons-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PianoLessons-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* DivineChords-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DivineChords-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* DivineChords-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DivineChords-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35239D18960242AF827E56DF /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		3DB4FB6253EB366EFE6AA330 /* Pods-PianoLessons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PianoLessons.debug.xcconfig"; path = "Target Support Files/Pods-PianoLessons/Pods-PianoLessons.debug.xcconfig"; sourceTree = "<group>"; };
 		3F1749A9254FC41A00398DB8 /* PlayKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayKey.m; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* PianoLessons */ = {
+		13B07FAE1A68108700A75B9A /* DivineChords */ = {
 			isa = PBXGroup;
 			children = (
 				3F95C25127BEFE6A00F0291F /* Configuration.storekit */,
@@ -195,7 +195,7 @@
 				3F20B53725A54C8500192C86 /* PianoLessons-Bridging-Header.h */,
 				3F20B53825A54C8600192C86 /* PianoLessons-tvOS-Bridging-Header.h */,
 			);
-			name = PianoLessons;
+			name = DivineChords;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -222,7 +222,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* PianoLessons */,
+				13B07FAE1A68108700A75B9A /* DivineChords */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PianoLessonsTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -239,9 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* ActiveEar.app */,
-				00E356EE1AD99517003FC87E /* PianoLessonsTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* PianoLessons-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* PianoLessons-tvOSTests.xctest */,
+				00E356EE1AD99517003FC87E /* DivineChordsTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* DivineChords-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* DivineChords-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,9 +290,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* PianoLessonsTests */ = {
+		00E356ED1AD99517003FC87E /* DivineChordsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PianoLessonsTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "DivineChordsTests" */;
 			buildPhases = (
 				FE92365B4337580B3D2D96F8 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -305,14 +305,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = PianoLessonsTests;
+			name = DivineChordsTests;
 			productName = PianoLessonsTests;
-			productReference = 00E356EE1AD99517003FC87E /* PianoLessonsTests.xctest */;
+			productReference = 00E356EE1AD99517003FC87E /* DivineChordsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* PianoLessons */ = {
+		13B07F861A680F5B00A75B9A /* DivineChords */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PianoLessons" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DivineChords" */;
 			buildPhases = (
 				0B621E7ADF5FD115084C2C06 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -326,14 +326,14 @@
 			);
 			dependencies = (
 			);
-			name = PianoLessons;
+			name = DivineChords;
 			productName = PianoLessons;
 			productReference = 13B07F961A680F5B00A75B9A /* ActiveEar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* PianoLessons-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* DivineChords-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "PianoLessons-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DivineChords-tvOS" */;
 			buildPhases = (
 				C61BDF43EEBE3A8498DB5A56 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -346,14 +346,14 @@
 			);
 			dependencies = (
 			);
-			name = "PianoLessons-tvOS";
+			name = "DivineChords-tvOS";
 			productName = "PianoLessons-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* PianoLessons-tvOS.app */;
+			productReference = 2D02E47B1E0B4A5D006451C7 /* DivineChords-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* PianoLessons-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* DivineChords-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "PianoLessons-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DivineChords-tvOSTests" */;
 			buildPhases = (
 				8EFB1B156910C431F6CC9BA8 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -365,9 +365,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "PianoLessons-tvOSTests";
+			name = "DivineChords-tvOSTests";
 			productName = "PianoLessons-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* PianoLessons-tvOSTests.xctest */;
+			productReference = 2D02E4901E0B4A5D006451C7 /* DivineChords-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -399,7 +399,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "PianoLessons" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "DivineChords" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -412,10 +412,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* PianoLessons */,
-				00E356ED1AD99517003FC87E /* PianoLessonsTests */,
-				2D02E47A1E0B4A5D006451C7 /* PianoLessons-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* PianoLessons-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* DivineChords */,
+				00E356ED1AD99517003FC87E /* DivineChordsTests */,
+				2D02E47A1E0B4A5D006451C7 /* DivineChords-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* DivineChords-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -719,12 +719,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* PianoLessons */;
+			target = 13B07F861A680F5B00A75B9A /* DivineChords */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* PianoLessons-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* DivineChords-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -751,7 +751,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PianoLessons.app/PianoLessons";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DivineChords.app/DivineChords";
 			};
 			name = Debug;
 		};
@@ -773,7 +773,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PianoLessons.app/PianoLessons";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DivineChords.app/DivineChords";
 			};
 			name = Release;
 		};
@@ -916,7 +916,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.PianoLessons-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PianoLessons-tvOS.app/PianoLessons-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DivineChords-tvOS.app/DivineChords-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -945,7 +945,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.PianoLessons-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PianoLessons-tvOS.app/PianoLessons-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DivineChords-tvOS.app/DivineChords-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1066,7 +1066,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PianoLessonsTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "DivineChordsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1075,7 +1075,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PianoLessons" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DivineChords" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1084,7 +1084,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "PianoLessons-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DivineChords-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1093,7 +1093,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "PianoLessons-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DivineChords-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1102,7 +1102,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "PianoLessons" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "DivineChords" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
