@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import {
   Text,
-  Button,
   View,
   Image,
   StyleSheet,
@@ -9,23 +8,16 @@ import {
   ScrollView,
   Dimensions,
   Animated,
-  NativeModules,
-  Keyboard,
-  Alert,
-  Linking,
 } from "react-native";
 
 import LinearGradient from "react-native-linear-gradient";
-
 import { useDispatch, useSelector, connect } from "react-redux";
 
-import Slider from "@react-native-community/slider";
 //import styles from './styles';
 import data from "../data/questions.json";
-import Instructions from "./Instructions";
 import KeyboardView from "./KeyboardView";
 import KeyboardView2 from "./KeyboardView2";
-import KeyboardView3 from "./KeyboardView3";
+//import KeyboardView3 from "./KeyboardView3";
 import { saveTestScore, saveProgress } from "../thunks/";
 
 import cStaff from "../../images/staff/C-major.png";
@@ -35,7 +27,6 @@ import fStaff from "../../images/staff/F-major.png";
 import gStaff from "../../images/staff/G-major.png";
 import aStaff from "../../images/staff/A-major.png";
 import bStaff from "../../images/staff/B-major.png";
-
 import dbStaff from "../../images/staff/D-flat-major.png";
 import ebStaff from "../../images/staff/E-flat-major.png";
 import fsStaff from "../../images/staff/F-sharp-major.png";
@@ -52,7 +43,6 @@ import bbStaff from "../../images/staff/B-flat-major.png";
 //https://github.com/zmxv/react-native-sound
 
 const { height, width } = Dimensions.get("window");
-const aspectRatio = height / width;
 
 const ChordsView = ({ level, mode, props }) => {
   const dispatch = useDispatch();
@@ -64,16 +54,10 @@ const ChordsView = ({ level, mode, props }) => {
 
   mode = mode - 1;
 
-  const [quizStarted, setQuizStarted] = useState(true);
-  const [instructions, setInstructions] = useState(null);
-
   const [principalChords, setPrincipalChords] = useState(null);
   const [relativeChords, setRelativeChords] = useState(null);
   const [alternateChords, setAlternateChords] = useState(null);
-
-  const [restarted, setRestarted] = useState(false);
   const [staff1, setStaff] = useState(false);
-
   const opacity = useState(new Animated.Value(0))[0];
 
   useEffect(() => {
@@ -96,12 +80,10 @@ const ChordsView = ({ level, mode, props }) => {
 
   useEffect(() => {
     initChordData();
-    //getStuff();
-    //initIAP();
 
-    return function cleanup() {
-      //console.log("will unmount");
-    };
+    // return function cleanup() {
+    //   //console.log("will unmount");
+    // };
   }, []);
 
   //unmount
@@ -388,166 +370,153 @@ const ChordsView = ({ level, mode, props }) => {
 
   return (
     <>
-      {restarted ? (
-        <Instructions
-          instructions={instructions}
-          modename={modename}
-          level={level}
-          startQuiz={() => startQuiz()}
-        />
-      ) : quizStarted ? (
-        <>
-          <View style={styles.mainContainer}>
-            <ScrollView>
-              <View
-                style={{
-                  padding: 20,
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <Text style={styles.headerTxt}>{modename}</Text>
-                {staff1 ? (
-                  <Image source={staff1} style={styles.staffImg} />
-                ) : null}
+      <View style={styles.mainContainer}>
+        <ScrollView>
+          <View
+            style={{
+              padding: 20,
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Text style={styles.headerTxt}>{modename}</Text>
+            {staff1 ? <Image source={staff1} style={styles.staffImg} /> : null}
 
-                <View
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    marginBottom: 10,
-                  }}
-                >
-                  <Text style={styles.chordHeader}>Principal Chords</Text>
-                </View>
-
-                {principalChords ? (
-                  <View>
-                    <View style={styles.btnContainer}>
-                      {principalChords.map((level, index) => {
-                        return (
-                          <TouchableOpacity
-                            key={level}
-                            onPressIn={() => {
-                              showChords(level, "principal");
-                            }}
-                            onPressOut={() => {
-                              releaseChord();
-                            }}
-                          >
-                            <LinearGradient
-                              colors={["#E2E2E2", "#004DC7"]}
-                              style={styles.chordBtn}
-                              key={level + 1}
-                            >
-                              <Text key={level + 2} style={styles.btnTxt}>
-                                {level}
-                              </Text>
-                            </LinearGradient>
-                          </TouchableOpacity>
-                        );
-                      })}
-                    </View>
-                  </View>
-                ) : null}
-
-                <View
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    marginBottom: 10,
-                  }}
-                >
-                  <Text style={styles.chordHeader}>Relative Minor Chords</Text>
-                </View>
-
-                {relativeChords ? (
-                  <View>
-                    <View style={styles.btnContainer}>
-                      {relativeChords.map((level, index) => {
-                        return (
-                          <TouchableOpacity
-                            key={level}
-                            onPressIn={() => {
-                              showChords(level, "relative");
-                            }}
-                            onPressOut={() => {
-                              releaseChord();
-                            }}
-                          >
-                            <LinearGradient
-                              colors={["#E2E2E2", "#FFFE52"]}
-                              style={styles.chordBtn}
-                              key={level + 1}
-                            >
-                              <Text style={styles.btnTxt} key={level + 2}>
-                                {level}
-                              </Text>
-                            </LinearGradient>
-                          </TouchableOpacity>
-                        );
-                      })}
-                    </View>
-                  </View>
-                ) : null}
-
-                <View
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    marginBottom: 10,
-                  }}
-                >
-                  <Text style={styles.chordHeader}>Alternate Chords</Text>
-                </View>
-                {alternateChords ? (
-                  <View>
-                    <View style={styles.btnContainer}>
-                      {alternateChords.map((level, index) => {
-                        return (
-                          <TouchableOpacity
-                            key={level}
-                            onPressIn={() => {
-                              showChords(level, "alternate");
-                            }}
-                            onPressOut={() => {
-                              releaseChord();
-                            }}
-                          >
-                            <LinearGradient
-                              colors={["#E2E2E2", "#1F9714"]}
-                              style={styles.chordBtn}
-                              key={level + 1}
-                            >
-                              <Text style={styles.btnTxt} key={level + 2}>
-                                {level}
-                              </Text>
-                            </LinearGradient>
-                          </TouchableOpacity>
-                        );
-                      })}
-                    </View>
-                  </View>
-                ) : null}
-              </View>
-
-              <View style={{ height: 250 }} />
-            </ScrollView>
             <View
               style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                width: "100%",
-                backgroundColor: "black",
-                flex: 1,
+                flexDirection: "row",
+                alignItems: "center",
+                marginBottom: 10,
               }}
             >
-              {width > 450 ? <KeyboardView2 /> : <KeyboardView />}
+              <Text style={styles.chordHeader}>Principal Chords</Text>
             </View>
+
+            {principalChords ? (
+              <View>
+                <View style={styles.btnContainer}>
+                  {principalChords.map((level, index) => {
+                    return (
+                      <TouchableOpacity
+                        key={level}
+                        onPressIn={() => {
+                          showChords(level, "principal");
+                        }}
+                        onPressOut={() => {
+                          releaseChord();
+                        }}
+                      >
+                        <LinearGradient
+                          colors={["#E2E2E2", "#004DC7"]}
+                          style={styles.chordBtn}
+                          key={level + 1}
+                        >
+                          <Text key={level + 2} style={styles.btnTxt}>
+                            {level}
+                          </Text>
+                        </LinearGradient>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+            ) : null}
+
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                marginBottom: 10,
+              }}
+            >
+              <Text style={styles.chordHeader}>Relative Minor Chords</Text>
+            </View>
+
+            {relativeChords ? (
+              <View>
+                <View style={styles.btnContainer}>
+                  {relativeChords.map((level, index) => {
+                    return (
+                      <TouchableOpacity
+                        key={level}
+                        onPressIn={() => {
+                          showChords(level, "relative");
+                        }}
+                        onPressOut={() => {
+                          releaseChord();
+                        }}
+                      >
+                        <LinearGradient
+                          colors={["#E2E2E2", "#FFFE52"]}
+                          style={styles.chordBtn}
+                          key={level + 1}
+                        >
+                          <Text style={styles.btnTxt} key={level + 2}>
+                            {level}
+                          </Text>
+                        </LinearGradient>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+            ) : null}
+
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                marginBottom: 10,
+              }}
+            >
+              <Text style={styles.chordHeader}>Alternate Chords</Text>
+            </View>
+            {alternateChords ? (
+              <View>
+                <View style={styles.btnContainer}>
+                  {alternateChords.map((level, index) => {
+                    return (
+                      <TouchableOpacity
+                        key={level}
+                        onPressIn={() => {
+                          showChords(level, "alternate");
+                        }}
+                        onPressOut={() => {
+                          releaseChord();
+                        }}
+                      >
+                        <LinearGradient
+                          colors={["#E2E2E2", "#1F9714"]}
+                          style={styles.chordBtn}
+                          key={level + 1}
+                        >
+                          <Text style={styles.btnTxt} key={level + 2}>
+                            {level}
+                          </Text>
+                        </LinearGradient>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+            ) : null}
           </View>
-        </>
-      ) : null}
+
+          <View style={{ height: 250 }} />
+        </ScrollView>
+        <View
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            backgroundColor: "black",
+            flex: 1,
+          }}
+        >
+          {width > 450 ? <KeyboardView2 /> : <KeyboardView />}
+        </View>
+      </View>
     </>
   );
 };

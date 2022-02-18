@@ -45,13 +45,11 @@ const KeyboardView2 = () => {
   ]);
 
   const playChords = (chords: Int8Array) => {
-    console.log("play chords: " + chords);
+    //console.log("play chords: " + chords);
 
     if (!upgraded || !playSounds) {
       return;
     }
-
-    //return;
 
     chords.forEach((key) => {
       if (Platform.OS === "ios") {
@@ -235,15 +233,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>C</Text>
+                }}
+              >
+                C
+              </Text>
             </View>
           </View>
           <View
@@ -266,12 +265,17 @@ const KeyboardView2 = () => {
             <View
               style={[
                 styles.accidentalView,
-                {
-                  display: showNotes ? "flex" : "none",
-                },
+                { display: showNotes ? "flex" : "none" },
               ]}
             >
-              <Text style={styles.accidentalTxt}>C# Db</Text>
+              <Text
+                style={[
+                  styles.accidentalTxt,
+                  { display: showNotes ? "flex" : "none" },
+                ]}
+              >
+                C# Db
+              </Text>
             </View>
           </View>
           <View
@@ -291,15 +295,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>D</Text>
+                }}
+              >
+                D
+              </Text>
             </View>
           </View>
           <View
@@ -322,12 +327,17 @@ const KeyboardView2 = () => {
             <View
               style={[
                 styles.accidentalView,
-                {
-                  display: showNotes ? "flex" : "none",
-                },
+                { display: showNotes ? "flex" : "none" },
               ]}
             >
-              <Text style={styles.accidentalTxt}>D# Eb</Text>
+              <Text
+                style={[
+                  styles.accidentalTxt,
+                  { display: showNotes ? "flex" : "none" },
+                ]}
+              >
+                D# Eb
+              </Text>
             </View>
           </View>
           <View
@@ -347,15 +357,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>E</Text>
+                }}
+              >
+                E
+              </Text>
             </View>
           </View>
           <View
@@ -375,15 +386,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>F</Text>
+                }}
+              >
+                F
+              </Text>
             </View>
           </View>
           <View
@@ -406,12 +418,17 @@ const KeyboardView2 = () => {
             <View
               style={[
                 styles.accidentalView,
-                {
-                  display: showNotes ? "flex" : "none",
-                },
+                { display: showNotes ? "flex" : "none" },
               ]}
             >
-              <Text style={styles.accidentalTxt}>F# Gb</Text>
+              <Text
+                style={[
+                  styles.accidentalTxt,
+                  { display: showNotes ? "flex" : "none" },
+                ]}
+              >
+                F# Gb
+              </Text>
             </View>
           </View>
           <View
@@ -431,15 +448,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>G</Text>
+                }}
+              >
+                G
+              </Text>
             </View>
           </View>
           <View
@@ -462,12 +480,17 @@ const KeyboardView2 = () => {
             <View
               style={[
                 styles.accidentalView,
-                {
-                  display: showNotes ? "flex" : "none",
-                },
+                { display: showNotes ? "flex" : "none" },
               ]}
             >
-              <Text style={styles.accidentalTxt}>G# Ab</Text>
+              <Text
+                style={[
+                  styles.accidentalTxt,
+                  { display: showNotes ? "flex" : "none" },
+                ]}
+              >
+                G# Ab
+              </Text>
             </View>
           </View>
           <View
@@ -487,15 +510,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>A</Text>
+                }}
+              >
+                A
+              </Text>
             </View>
           </View>
           <View
@@ -518,12 +542,17 @@ const KeyboardView2 = () => {
             <View
               style={[
                 styles.accidentalView,
-                {
-                  display: showNotes ? "flex" : "none",
-                },
+                { display: showNotes ? "flex" : "none" },
               ]}
             >
-              <Text style={styles.accidentalTxt}>A# Bb</Text>
+              <Text
+                style={[
+                  styles.accidentalTxt,
+                  { display: showNotes ? "flex" : "none" },
+                ]}
+              >
+                A# Bb
+              </Text>
             </View>
           </View>
           <View
@@ -543,15 +572,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>B</Text>
+                }}
+              >
+                B
+              </Text>
             </View>
           </View>
           <View
@@ -571,15 +601,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>C</Text>
+                }}
+              >
+                C
+              </Text>
             </View>
           </View>
           <View
@@ -602,12 +633,17 @@ const KeyboardView2 = () => {
             <View
               style={[
                 styles.accidentalView,
-                {
-                  display: showNotes ? "flex" : "none",
-                },
+                { display: showNotes ? "flex" : "none" },
               ]}
             >
-              <Text style={styles.accidentalTxt}>C# Db</Text>
+              <Text
+                style={[
+                  styles.accidentalTxt,
+                  { display: showNotes ? "flex" : "none" },
+                ]}
+              >
+                C# Db
+              </Text>
             </View>
           </View>
           <View
@@ -627,15 +663,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>D</Text>
+                }}
+              >
+                D
+              </Text>
             </View>
           </View>
           <View
@@ -658,12 +695,17 @@ const KeyboardView2 = () => {
             <View
               style={[
                 styles.accidentalView,
-                {
-                  display: showNotes ? "flex" : "none",
-                },
+                { display: showNotes ? "flex" : "none" },
               ]}
             >
-              <Text style={styles.accidentalTxt}>D# Eb</Text>
+              <Text
+                style={[
+                  styles.accidentalTxt,
+                  { display: showNotes ? "flex" : "none" },
+                ]}
+              >
+                D# Eb
+              </Text>
             </View>
           </View>
           <View
@@ -683,15 +725,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>E</Text>
+                }}
+              >
+                E
+              </Text>
             </View>
           </View>
           <View
@@ -711,15 +754,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>F</Text>
+                }}
+              >
+                F
+              </Text>
             </View>
           </View>
           <View
@@ -742,12 +786,17 @@ const KeyboardView2 = () => {
             <View
               style={[
                 styles.accidentalView,
-                {
-                  display: showNotes ? "flex" : "none",
-                },
+                { display: showNotes ? "flex" : "none" },
               ]}
             >
-              <Text style={styles.accidentalTxt}>F# Gb</Text>
+              <Text
+                style={[
+                  styles.accidentalTxt,
+                  { display: showNotes ? "flex" : "none" },
+                ]}
+              >
+                F# Gb
+              </Text>
             </View>
           </View>
           <View
@@ -767,15 +816,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>G</Text>
+                }}
+              >
+                G
+              </Text>
             </View>
           </View>
           <View
@@ -798,12 +848,17 @@ const KeyboardView2 = () => {
             <View
               style={[
                 styles.accidentalView,
-                {
-                  display: showNotes ? "flex" : "none",
-                },
+                { display: showNotes ? "flex" : "none" },
               ]}
             >
-              <Text style={styles.accidentalTxt}>G# Ab</Text>
+              <Text
+                style={[
+                  styles.accidentalTxt,
+                  { display: showNotes ? "flex" : "none" },
+                ]}
+              >
+                G# Ab
+              </Text>
             </View>
           </View>
           <View
@@ -823,15 +878,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>A</Text>
+                }}
+              >
+                A
+              </Text>
             </View>
           </View>
           <View
@@ -854,12 +910,17 @@ const KeyboardView2 = () => {
             <View
               style={[
                 styles.accidentalView,
-                {
-                  display: showNotes ? "flex" : "none",
-                },
+                { display: showNotes ? "flex" : "none" },
               ]}
             >
-              <Text style={styles.accidentalTxt}>A# Bb</Text>
+              <Text
+                style={[
+                  styles.accidentalTxt,
+                  { display: showNotes ? "flex" : "none" },
+                ]}
+              >
+                A# Bb
+              </Text>
             </View>
           </View>
           <View
@@ -879,15 +940,16 @@ const KeyboardView2 = () => {
                   : styles.icon
               }
             />
-            <View
-              style={[
-                styles.whiteKeyView,
-                {
+            <View style={[styles.whiteKeyView]}>
+              <Text
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
                   display: showNotes ? "flex" : "none",
-                },
-              ]}
-            >
-              <Text style={{ fontSize: 35, fontWeight: "bold" }}>B</Text>
+                }}
+              >
+                B
+              </Text>
             </View>
           </View>
           <View

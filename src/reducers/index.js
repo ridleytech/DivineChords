@@ -51,9 +51,9 @@ const inititalState = {
   loginErrorMsg: "",
   currentChord: "",
   currentChordType: "",
-  playSounds: true,
+  playSounds: false,
   showNotes: false,
-  upgraded: true,
+  upgraded: false,
   productList: [],
 };
 

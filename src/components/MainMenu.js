@@ -39,6 +39,11 @@ const MainMenu = ({ setMode }) => {
               borderTopLeftRadius: 8,
               borderTopRightRadius: 8,
               backgroundColor: "#F6FA43",
+              borderColor: "black",
+              // borderRightWidth: 2,
+              // borderTopWidth: 2,
+              // borderLeftWidth: 2,
+              //borderWidth: 2,
             }}
           >
             <Text
@@ -69,9 +74,11 @@ const MainMenu = ({ setMode }) => {
                   <View
                     style={{
                       backgroundColor: "#3AB24A",
-
+                      // borderLeftWidth: 2,
+                      // borderRightWidth: 2,
                       height: 65,
-                      marginBottom: 2,
+                      marginBottom: 1,
+                      //borderTopWidth: index == 0 ? 2 : 0,
                     }}
                   >
                     <Text

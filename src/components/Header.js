@@ -24,6 +24,7 @@ import RNIap, {
   purchaseErrorListener,
   purchaseUpdatedListener,
 } from "react-native-iap";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Header = (props) => {
   //console.log('header props: ' + JSON.stringify(props));
@@ -74,6 +75,7 @@ const Header = (props) => {
 
   useEffect(() => {
     initIAP();
+    retrieveData();
 
     return function cleanup() {
       //console.log("will unmount");
@@ -104,7 +106,7 @@ const Header = (props) => {
 
       getAvailablePurchases();
       //getStuff();
-      // /await RNIap.consumeAllItemsAndroid();
+      await RNIap.consumeAllItemsAndroid();
     } catch (err) {
       console.log("error in cdm => ", err);
     }
@@ -223,6 +225,28 @@ const Header = (props) => {
     dispatch({
       type: "UPGRADE",
     });
+
+    AsyncStorage.setItem("upgraded", "true");
+  };
+
+  const retrieveData = async () => {
+    try {
+      var value = await AsyncStorage.getItem("upgraded");
+
+      if (value !== null) {
+        if (value == "true") {
+          //console.log("was upgraded");
+
+          dispatch({
+            type: "UPGRADE",
+          });
+        }
+      } else {
+        //console.log('save default pitch data');
+      }
+    } catch (error) {
+      // Error retrieving data
+    }
   };
 
   // const displayNotes = () => {
