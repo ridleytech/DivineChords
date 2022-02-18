@@ -6,6 +6,7 @@ import {
   ImageBackground,
   StyleSheet,
   Text,
+  Platform,
 } from "react-native";
 import bgImg from "../../images/piano-bg.png";
 import headerLogo from "../../images/header-logo.png";
@@ -48,6 +49,10 @@ const Header = (props) => {
   }
 
   const manageSound = () => {
+    // getItems();
+
+    // return;
+
     if (upgraded) {
       dispatch({ type: "MANAGE_SOUND", status: playSounds ? 0 : 1 });
     } else {
@@ -202,7 +207,16 @@ const Header = (props) => {
 
   const requestPurchase = async (sku) => {
     try {
-      RNIap.requestPurchase(sku);
+      await RNIap.requestPurchase(sku).then(async (result) => {
+        if (Platform.OS == "ios") {
+          console.log("ios trans: " + JSON.stringify(result));
+          await RNIap.finishTransactionIOS(result.transactionId);
+          console.log("iOS receipt => ", result.transactionReceipt);
+        } else {
+          await RNIap.consumePurchaseAndroid(result.purchaseToken);
+          console.log("Android receipt");
+        }
+      });
     } catch (err) {
       console.log("requestPurchase error => ", err);
     }
