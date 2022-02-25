@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'PianoLessons' do
+target 'DivineChords' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
@@ -11,7 +11,7 @@ target 'PianoLessons' do
   pod 'RNSound', :path => '../node_modules/react-native-sound'
 
 
-  target 'PianoLessonsTests' do
+  target 'DivineChordsTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -26,10 +26,10 @@ target 'PianoLessons' do
   end
 end
 
-target 'PianoLessons-tvOS' do
-  # Pods for PianoLessons-tvOS
+target 'DivineChords-tvOS' do
+  # Pods for DivineChords-tvOS
 
-  target 'PianoLessons-tvOSTests' do
+  target 'DivineChords-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

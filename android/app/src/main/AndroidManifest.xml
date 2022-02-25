@@ -2,7 +2,6 @@
     package="com.pianolessons">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:name=".MainApplication"

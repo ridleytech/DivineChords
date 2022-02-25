@@ -121,7 +121,7 @@ export default (state = inititalState, action) => {
     case "SAVE_PURCHASES":
       return {
         ...state,
-        receipt: action.payload.receipt,
+        receipt: action.receipt,
         upgraded: true,
       };
 

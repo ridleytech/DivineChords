@@ -117,6 +117,154 @@ const Header = (props) => {
     };
   }, []);
 
+  // useEffect(() => {
+  //   initIAP2();
+
+  //   purchaseUpdateSubscription = RNIap.purchaseUpdatedListener(
+  //     async (purchase) => {
+  //       console.log("purchase", purchase);
+
+  //       const receipt = purchase.transactionReceipt;
+
+  //       console.log("receipt: " + receipt);
+
+  //       if (receipt) {
+  //         try {
+  //           if (Platform.OS === "ios") {
+  //             RNIap.finishTransactionIOS(purchase.transactionId);
+  //           } else if (Platform.OS === "android") {
+  //             await RNIap.consumeAllItemsAndroid(purchase.purchaseToken);
+
+  //             await RNIap.acknowledgePurchaseAndroid(purchase.purchaseToken);
+  //           }
+
+  //           await RNIap.finishTransaction(purchase, true);
+  //         } catch (ackErr) {
+  //           console.log("ackErr INAPP>>>>", ackErr);
+  //         }
+  //       }
+  //     }
+  //   );
+
+  //   purchaseErrorSubscription = RNIap.purchaseErrorListener((error) => {
+  //     console.log("purchaseErrorListener INAPP>>>>", error);
+  //   });
+
+  //   return () => {
+  //     if (purchaseUpdateSubscription) {
+  //       purchaseUpdateSubscription.remove();
+
+  //       purchaseUpdateSubscription = null;
+  //     }
+  //     if (purchaseErrorSubscription) {
+  //       purchaseErrorSubscription.remove();
+
+  //       purchaseErrorSubscription = null;
+  //     }
+  //   };
+  // }, []);
+
+  const initIAP2 = async () => {
+    await RNIap.initConnection()
+
+      .then(async (connection) => {
+        console.log("IAP result", connection);
+
+        getItems2();
+      })
+
+      .catch((err) => {
+        console.warn(`IAP ERROR ${err.code}`, err.message);
+      });
+
+    await RNIap.flushFailedPurchasesCachedAsPendingAndroid()
+
+      .then(async (consumed) => {
+        console.log("consumed all android items?", consumed);
+      })
+      .catch((err) => {
+        console.warn(
+          `flushFailedPurchasesCachedAsPendingAndroid ERROR ${err.code}`,
+          err.message
+        );
+      });
+  };
+
+  const getItems2 = async () => {
+    try {
+      console.log("itemSkus ", itemSkus);
+
+      const Products = await RNIap.getAvailablePurchases(itemSkus);
+
+      console.log(" IAP Su", Products);
+
+      if (Products.length !== 0) {
+        if (Platform.OS === "android") {
+          //Your logic here to save the products in states etc
+        } else if (Platform.OS === "ios") {
+          // your logic here to save the products in states etc
+          // Make sure to check the response differently for android and ios as it is different for both
+        }
+      }
+    } catch (err) {
+      console.warn("IAP error", err.code, err.message, err);
+
+      setError(err.message);
+    }
+  };
+
+  const requestPurchase2 = async (sku) => {
+    setBuyIsLoading(true);
+
+    console.log("IAP req", sku);
+
+    try {
+      await RNIap.requestSubscription(sku)
+
+        .then(async (result) => {
+          console.log("IAP req sub", result);
+
+          if (Platform.OS === "android") {
+            setPurchaseToken(result.purchaseToken);
+
+            setPackageName(result.packageNameAndroid);
+
+            setProductId(result.productId);
+
+            // can do your API call here to save the purchase details of particular user
+          } else if (Platform.OS === "ios") {
+            console.log(result.transactionReceipt);
+
+            setProductId(result.productId);
+
+            setReceipt(result.transactionReceipt);
+
+            // can do your API call here to save the purchase details of particular user
+          }
+
+          setBuyIsLoading(false);
+        })
+
+        .catch((err) => {
+          setBuyIsLoading(false);
+
+          console.warn(
+            `IAP req ERROR %%%%% ${err.code}`,
+            err.message,
+            isModalVisible
+          );
+
+          setError(err.message);
+        });
+    } catch (err) {
+      setBuyIsLoading(false);
+
+      console.warn(`err ${error.code}`, error.message);
+
+      setError(err.message);
+    }
+  };
+
   // old iap
 
   const initIAP = async () => {
@@ -209,24 +357,20 @@ const Header = (props) => {
 
       console.info("history purchases => ", purchases2);
 
-      // const purchases3 = await RNIap.getSubscriptions();
+      const purchases3 = await RNIap.getSubscriptions();
 
-      // console.info("subs => ", purchases3);
+      console.info("subs => ", purchases3);
 
       const purchases4 = await RNIap.getProducts(itemSkus);
 
       console.info("prods => ", purchases4);
 
       if (purchases && purchases.length > 0) {
-        purchaseConfirmed();
-
-        console.info("purchases[0].transactionReceipt => ", purchases[0]);
-
-        // dispatch({
-        //   type: "SAVE_PURCHASES",
-        //   //availableItemsMessage: `Got ${purchases.length} items.`,
-        //   receipt: purchases[0].transactionReceipt,
-        // });
+        dispatch({
+          type: "SAVE_PURCHASES",
+          //availableItemsMessage: `Got ${purchases.length} items.`,
+          receipt: purchases[0].transactionReceipt,
+        });
       }
     } catch (err) {
       //console.warn(err.code, err.message);
@@ -251,7 +395,7 @@ const Header = (props) => {
     } catch (err) {
       console.log("requestPurchase error => ", JSON.stringify(err));
 
-      //Alert.alert("Purchase Error", err.code + ": " + err.message);
+      Alert.alert("Purchase Error", err.code + ": " + err.message);
 
       // if (err.code == "E_USER_CANCELLED") {
       // } else {
@@ -271,7 +415,9 @@ const Header = (props) => {
   // };
 
   const purchaseConfirmed = () => {
-    console.log("purchaseConfirmed");
+    //you can code here for what changes you want to do in db on purchase successfull
+
+    //console.log("purchaseConfirmed");
     dispatch({
       type: "UPGRADE",
     });

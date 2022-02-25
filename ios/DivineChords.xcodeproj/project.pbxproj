@@ -8,27 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PianoLessonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PianoLessonsTests.m */; };
+		0FA68A4B3556AC150A2BCC9F /* libPods-DivineChords-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FADE9DC1BCBEC9C0E6BAE3 /* libPods-DivineChords-tvOS.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		240AEC46BC63C00B98FBB0D0 /* libPods-PianoLessons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3E3525B8E01DCEE8683AB5 /* libPods-PianoLessons.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* PianoLessonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PianoLessonsTests.m */; };
-		323A2259DF36A17A6016409B /* libPods-PianoLessons-PianoLessonsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 791300522FC634095A300B9D /* libPods-PianoLessons-PianoLessonsTests.a */; };
 		3F1749AC254FC41B00398DB8 /* PlayKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1749A9254FC41A00398DB8 /* PlayKey.m */; };
 		3F20B53A25A54C8600192C86 /* fix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20B53925A54C8600192C86 /* fix.swift */; };
 		3F20B53B25A54C8600192C86 /* fix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20B53925A54C8600192C86 /* fix.swift */; };
+		3F5856B227C68F2E00687513 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F95C24A27BECDB500F0291F /* StoreKit.framework */; };
 		3F877FC02642CE09000BB753 /* Chateau Grand-v1.8.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 3F877FBF2642CE08000BB753 /* Chateau Grand-v1.8.sf2 */; };
-		3F95C24B27BECDB500F0291F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F95C24A27BECDB500F0291F /* StoreKit.framework */; };
 		3F95C25227BEFE6A00F0291F /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 3F95C25127BEFE6A00F0291F /* Configuration.storekit */; };
 		462CA3D40BE84B24BD38A183 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47BFEA39EBD4117A67D7CA7 /* Foundation.ttf */; };
+		48E35E4744390068D9974318 /* libPods-DivineChords.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6209D4EE61C9F587F3A030A7 /* libPods-DivineChords.a */; };
+		5322B31151FCD8A65A72D8CB /* libPods-DivineChords-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6FEA1E18BAFDD5020D7FA /* libPods-DivineChords-tvOSTests.a */; };
 		55F28F0EC6BF4C169126F99B /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FFDB5FEB9AE4F1398BC3F05 /* MaterialCommunityIcons.ttf */; };
 		6083A6BE978E46C9BAC76FD6 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64AA1748A274476B8B02224 /* FontAwesome5_Solid.ttf */; };
 		636D213A3B5242F18F3A972C /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35239D18960242AF827E56DF /* Fontisto.ttf */; };
 		6701B0D792494932839CB3C0 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 875DF2B184A94F3A8898014C /* Roboto_medium.ttf */; };
-		690CC6AE648799370EFBDDD2 /* libPods-PianoLessons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A1370B77D8C1D5DE3346D2 /* libPods-PianoLessons-tvOS.a */; };
 		72EE8FF9A4674EFBB847740F /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCA33421225B49C9A85D408F /* Roboto.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8AE94B6F4C6448CC85AC4025 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD3B5C22213041598383243E /* Ionicons.ttf */; };
@@ -39,11 +39,11 @@
 		B8EAD9A9ED5643BC952F15DE /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15E99C9027D949B69482F917 /* FontAwesome5_Brands.ttf */; };
 		B94997BE68F14401A83BF8F2 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EF7C31F3BBE4F9A992A8546 /* MaterialIcons.ttf */; };
 		C02D1939EF3D4F1F9BF1E841 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCD6DE5743B04DD4AA240340 /* AntDesign.ttf */; };
+		C3DC07E1DFBA0955EA422262 /* libPods-DivineChords-DivineChordsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC02A7EB3B7012E04EAE9C7 /* libPods-DivineChords-DivineChordsTests.a */; };
 		CD16F9710C93402D9D10E609 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8AE369ABDCE48B792F25836 /* SimpleLineIcons.ttf */; };
 		DD84DDF37E384E829B2F15CA /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 279A6EF62A38448DA24A1AB8 /* FontAwesome.ttf */; };
 		EA8848AF386B45A39C5941A6 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9241921D4794722813E9D48 /* Entypo.ttf */; };
 		F18A263C2F9A47CA89B4DBD1 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54726B2FDA2A48759400F2F6 /* EvilIcons.ttf */; };
-		FB554B9EAA3433D4A5BA0E31 /* libPods-PianoLessons-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 779C8EF765E8A0A970A8F583 /* libPods-PianoLessons-tvOSTests.a */; };
 		FDA750666CCB466086770CF7 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B247D07CE78A449680C5ACC9 /* FontAwesome5_Regular.ttf */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +79,7 @@
 		15E99C9027D949B69482F917 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		1FFDB5FEB9AE4F1398BC3F05 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		279A6EF62A38448DA24A1AB8 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		2C3E3525B8E01DCEE8683AB5 /* libPods-PianoLessons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PianoLessons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B199643CD77CA3F4112CC75 /* Pods-DivineChords-DivineChordsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DivineChords-DivineChordsTests.release.xcconfig"; path = "Target Support Files/Pods-DivineChords-DivineChordsTests/Pods-DivineChords-DivineChordsTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* DivineChords-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DivineChords-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* DivineChords-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DivineChords-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35239D18960242AF827E56DF /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
@@ -93,21 +93,27 @@
 		3F95C24A27BECDB500F0291F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3F95C25127BEFE6A00F0291F /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = Configuration.storekit; path = PianoLessons/Configuration.storekit; sourceTree = "<group>"; };
 		3FFC9FD825BE6FB20078D105 /* AppCenter-Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppCenter-Config.plist"; sourceTree = "<group>"; };
+		46533E3C49A7197BBD858E1B /* Pods-DivineChords-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DivineChords-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-DivineChords-tvOS/Pods-DivineChords-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		47DCCBE79F5A0C125BAF4C0B /* Pods-DivineChords-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DivineChords-tvOS.release.xcconfig"; path = "Target Support Files/Pods-DivineChords-tvOS/Pods-DivineChords-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		4864F74B2CBC420E8176A0B8 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		4BB9DA7342199582CE5AB1AA /* Pods-PianoLessons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PianoLessons.release.xcconfig"; path = "Target Support Files/Pods-PianoLessons/Pods-PianoLessons.release.xcconfig"; sourceTree = "<group>"; };
 		502DD4B115B07F011A162B01 /* Pods-PianoLessons-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PianoLessons-tvOS.release.xcconfig"; path = "Target Support Files/Pods-PianoLessons-tvOS/Pods-PianoLessons-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		54726B2FDA2A48759400F2F6 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		5BC64F84C919472381FE9338 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		6209D4EE61C9F587F3A030A7 /* libPods-DivineChords.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DivineChords.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EA574B6A7B4D93B1E09D37 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		779C8EF765E8A0A970A8F583 /* libPods-PianoLessons-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PianoLessons-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		791300522FC634095A300B9D /* libPods-PianoLessons-PianoLessonsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PianoLessons-PianoLessonsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PianoLessons/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		875DF2B184A94F3A8898014C /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
 		8DF4157A0A31A1AA15D27129 /* Pods-PianoLessons-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PianoLessons-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-PianoLessons-tvOSTests/Pods-PianoLessons-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F710B61C2E0D72764B96660 /* Pods-PianoLessons-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PianoLessons-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-PianoLessons-tvOS/Pods-PianoLessons-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		ABA2198CC4EC77ECFA4849BC /* Pods-DivineChords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DivineChords.debug.xcconfig"; path = "Target Support Files/Pods-DivineChords/Pods-DivineChords.debug.xcconfig"; sourceTree = "<group>"; };
 		B247D07CE78A449680C5ACC9 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		B5C6FEA1E18BAFDD5020D7FA /* libPods-DivineChords-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DivineChords-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB1893888B2D4284B65C1D4 /* Pods-DivineChords-DivineChordsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DivineChords-DivineChordsTests.debug.xcconfig"; path = "Target Support Files/Pods-DivineChords-DivineChordsTests/Pods-DivineChords-DivineChordsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6452974BC80AE20585EF9CD /* Pods-DivineChords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DivineChords.release.xcconfig"; path = "Target Support Files/Pods-DivineChords/Pods-DivineChords.release.xcconfig"; sourceTree = "<group>"; };
 		C8AE369ABDCE48B792F25836 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		D47BFEA39EBD4117A67D7CA7 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		D4FADE9DC1BCBEC9C0E6BAE3 /* libPods-DivineChords-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DivineChords-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA33421225B49C9A85D408F /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		DCD6DE5743B04DD4AA240340 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		DD3B5C22213041598383243E /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -116,10 +122,12 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		ED68F004F4706CD4B9BAA88D /* Pods-PianoLessons-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PianoLessons-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PianoLessons-tvOSTests/Pods-PianoLessons-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EEE6190AFE85876F4EC648FC /* Pods-DivineChords-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DivineChords-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DivineChords-tvOSTests/Pods-DivineChords-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1070D9103FC6B35BBCD24EA /* Pods-DivineChords-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DivineChords-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-DivineChords-tvOSTests/Pods-DivineChords-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		F64AA1748A274476B8B02224 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
-		F9A1370B77D8C1D5DE3346D2 /* libPods-PianoLessons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PianoLessons-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA265697F0290FA25B2B8F9 /* Pods-PianoLessons-PianoLessonsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PianoLessons-PianoLessonsTests.debug.xcconfig"; path = "Target Support Files/Pods-PianoLessons-PianoLessonsTests/Pods-PianoLessons-PianoLessonsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE7B56670BA8409EBBBE509C /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		FEC02A7EB3B7012E04EAE9C7 /* libPods-DivineChords-DivineChordsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DivineChords-DivineChordsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				323A2259DF36A17A6016409B /* libPods-PianoLessons-PianoLessonsTests.a in Frameworks */,
+				C3DC07E1DFBA0955EA422262 /* libPods-DivineChords-DivineChordsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				240AEC46BC63C00B98FBB0D0 /* libPods-PianoLessons.a in Frameworks */,
-				3F95C24B27BECDB500F0291F /* StoreKit.framework in Frameworks */,
+				3F5856B227C68F2E00687513 /* StoreKit.framework in Frameworks */,
+				48E35E4744390068D9974318 /* libPods-DivineChords.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				690CC6AE648799370EFBDDD2 /* libPods-PianoLessons-tvOS.a in Frameworks */,
+				0FA68A4B3556AC150A2BCC9F /* libPods-DivineChords-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB554B9EAA3433D4A5BA0E31 /* libPods-PianoLessons-tvOSTests.a in Frameworks */,
+				5322B31151FCD8A65A72D8CB /* libPods-DivineChords-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,10 +212,10 @@
 				3F95C24A27BECDB500F0291F /* StoreKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				2C3E3525B8E01DCEE8683AB5 /* libPods-PianoLessons.a */,
-				791300522FC634095A300B9D /* libPods-PianoLessons-PianoLessonsTests.a */,
-				F9A1370B77D8C1D5DE3346D2 /* libPods-PianoLessons-tvOS.a */,
-				779C8EF765E8A0A970A8F583 /* libPods-PianoLessons-tvOSTests.a */,
+				6209D4EE61C9F587F3A030A7 /* libPods-DivineChords.a */,
+				FEC02A7EB3B7012E04EAE9C7 /* libPods-DivineChords-DivineChordsTests.a */,
+				D4FADE9DC1BCBEC9C0E6BAE3 /* libPods-DivineChords-tvOS.a */,
+				B5C6FEA1E18BAFDD5020D7FA /* libPods-DivineChords-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -283,6 +291,14 @@
 				502DD4B115B07F011A162B01 /* Pods-PianoLessons-tvOS.release.xcconfig */,
 				ED68F004F4706CD4B9BAA88D /* Pods-PianoLessons-tvOSTests.debug.xcconfig */,
 				8DF4157A0A31A1AA15D27129 /* Pods-PianoLessons-tvOSTests.release.xcconfig */,
+				ABA2198CC4EC77ECFA4849BC /* Pods-DivineChords.debug.xcconfig */,
+				C6452974BC80AE20585EF9CD /* Pods-DivineChords.release.xcconfig */,
+				BEB1893888B2D4284B65C1D4 /* Pods-DivineChords-DivineChordsTests.debug.xcconfig */,
+				2B199643CD77CA3F4112CC75 /* Pods-DivineChords-DivineChordsTests.release.xcconfig */,
+				46533E3C49A7197BBD858E1B /* Pods-DivineChords-tvOS.debug.xcconfig */,
+				47DCCBE79F5A0C125BAF4C0B /* Pods-DivineChords-tvOS.release.xcconfig */,
+				EEE6190AFE85876F4EC648FC /* Pods-DivineChords-tvOSTests.debug.xcconfig */,
+				F1070D9103FC6B35BBCD24EA /* Pods-DivineChords-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -505,7 +521,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PianoLessons-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DivineChords-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -532,7 +548,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PianoLessons-PianoLessonsTests/Pods-PianoLessons-PianoLessonsTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DivineChords-DivineChordsTests/Pods-DivineChords-DivineChordsTests-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
@@ -545,7 +561,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PianoLessons-PianoLessonsTests/Pods-PianoLessons-PianoLessonsTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DivineChords-DivineChordsTests/Pods-DivineChords-DivineChordsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8EFB1B156910C431F6CC9BA8 /* [CP] Check Pods Manifest.lock */ = {
@@ -563,7 +579,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PianoLessons-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DivineChords-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -585,7 +601,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PianoLessons-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DivineChords-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -598,7 +614,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PianoLessons/Pods-PianoLessons-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DivineChords/Pods-DivineChords-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
@@ -611,7 +627,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PianoLessons/Pods-PianoLessons-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DivineChords/Pods-DivineChords-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -667,7 +683,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PianoLessons-PianoLessonsTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DivineChords-DivineChordsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -732,7 +748,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAA265697F0290FA25B2B8F9 /* Pods-PianoLessons-PianoLessonsTests.debug.xcconfig */;
+			baseConfigurationReference = BEB1893888B2D4284B65C1D4 /* Pods-DivineChords-DivineChordsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -757,7 +773,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBC61833826E420550BAFE63 /* Pods-PianoLessons-PianoLessonsTests.release.xcconfig */;
+			baseConfigurationReference = 2B199643CD77CA3F4112CC75 /* Pods-DivineChords-DivineChordsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -779,11 +795,11 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DB4FB6253EB366EFE6AA330 /* Pods-PianoLessons.debug.xcconfig */;
+			baseConfigurationReference = ABA2198CC4EC77ECFA4849BC /* Pods-DivineChords.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = 9X4Q65DV8Y;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PianoLessons/Info.plist;
@@ -806,11 +822,11 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BB9DA7342199582CE5AB1AA /* Pods-PianoLessons.release.xcconfig */;
+			baseConfigurationReference = C6452974BC80AE20585EF9CD /* Pods-DivineChords.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = 9X4Q65DV8Y;
 				INFOPLIST_FILE = PianoLessons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -831,7 +847,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F710B61C2E0D72764B96660 /* Pods-PianoLessons-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 46533E3C49A7197BBD858E1B /* Pods-DivineChords-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -863,7 +879,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 502DD4B115B07F011A162B01 /* Pods-PianoLessons-tvOS.release.xcconfig */;
+			baseConfigurationReference = 47DCCBE79F5A0C125BAF4C0B /* Pods-DivineChords-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -894,7 +910,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED68F004F4706CD4B9BAA88D /* Pods-PianoLessons-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = EEE6190AFE85876F4EC648FC /* Pods-DivineChords-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -923,7 +939,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DF4157A0A31A1AA15D27129 /* Pods-PianoLessons-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = F1070D9103FC6B35BBCD24EA /* Pods-DivineChords-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

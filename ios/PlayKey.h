@@ -10,6 +10,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <UIKit/UIKit.h>
 #import "React/RCTBridgeModule.h"
+#import <StoreKit/StoreKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -57,7 +58,13 @@ typedef struct {
   bool graphStarted;
   
   SourceAudioBufferData mUserData;
+  BOOL areAdsRemoved;
+
 }
+
+
+- (IBAction)restore;
+- (IBAction)tapsRemoveAds;
 
 
 

@@ -10,4 +10,18 @@ https://github.com/dooboolab/react-native-iap/issues
 https://codewithghazi.com/componentwillunmount-with-react-hooks/
 in-app purchases: https://www.youtube.com/watch?v=KSI4oPDx14k
 
+https://github.com/dooboolab/react-native-iap/issues/581
+https://github.com/dooboolab/react-native-iap/issues/221
+
+
+https://developer.android.com/google/play/billing/migrate#groovy
+https://android-developers.googleblog.com/2020/06/meet-google-play-billing-library.html
+https://www.youtube.com/watch?v=nLBoVrAMF04
+https://github.com/DoableDanny/RN-IAP-YouTube-Tutorial-App
+https://www.doabledanny.com/react-native-iap-example-android
+https://stackoverflow.com/questions/19556336/how-do-you-add-an-in-app-purchase-to-an-ios-application
+
+    "react-native-iap": "^3.5.9",
+
+
 You are dangerously allowing react-native-iap to finish your transaction automatically. You should set andDangerouslyFinishTransactionAutomatically to false when calling requestPurchase and call finishTransaction manually when you have delivered the purchased goods to the user. It defaults to true to provide backwards compatibility. Will default to false in version 4.0.0.
